@@ -16,7 +16,8 @@ const velocidadEscritura = 100;
 const velocidadParpadeoBarra = 500;
 
 //BOTONES
-const velocidadAparicion = 100;
+const velocidadActualizacion = 20;
+const cantidadAparicion = 0.02;
 
 function repro() {
     
@@ -67,7 +68,7 @@ function repro() {
         var opacidad = 0;
         var mostrarIntervalId = setInterval(function() {
           if (opacidad < 1) {
-            opacidad += 0.1; 
+            opacidad += cantidadAparicion; 
             elemento.style.opacity = opacidad;
           } else {
             clearInterval(mostrarIntervalId);
