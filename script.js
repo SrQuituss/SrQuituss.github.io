@@ -36,6 +36,24 @@ elementoTextoQuienSoy.addEventListener('mouseleave', function(){
     cambiarColorProgresivamente(elementoTextoQuienSoy);
 });
 
+elementoTextoProyectos.addEventListener('mouseenter', function(){
+    defaultColorProyectos = false;
+    cambiarColorProgresivamente(elementoTextoProyectos);
+});
+elementoTextoQuienSoy.addEventListener('mouseleave', function(){
+    defaultColorProyectos = true;
+    cambiarColorProgresivamente(elementoTextoProyectos);
+});
+
+elementoTextoContacto.addEventListener('mouseenter', function(){
+    defaultColorContacto = false;
+    cambiarColorProgresivamente(elementoTextoContacto);
+});
+elementoTextoContacto.addEventListener('mouseleave', function(){
+    defaultColorContacto = true;
+    cambiarColorProgresivamente(elementoTextoContacto);
+});
+
 function repro() {
     
     let i = 0;
@@ -118,6 +136,64 @@ function cambiarColorProgresivamente(elemento)
                 {
                     factorQuienSoy += cantidadCambioColor;
                     elemento.style.color = lerpColor(defaultColor, changedColor, factorQuienSoy);
+                }
+                else
+                {
+                    clearInterval(IntervalId);
+                }
+            }
+        }, velocidadActualizacion);
+    }
+    else if (elemento == elementoTextoProyectos)
+    {   
+        var IntervalId = setInterval(function() {
+            if (defaultColorProyectos)
+            { 
+                if (factorProyectos>0)
+                {
+                    factorProyectos -= cantidadCambioColor;
+                    elemento.style.color = lerpColor(defaultColor, changedColor, factorProyectos);
+                }
+                else
+                {
+                    clearInterval(IntervalId);
+                }
+            }
+            else
+            {
+                if (factorProyectos<1)
+                {
+                    factorProyectos += cantidadCambioColor;
+                    elemento.style.color = lerpColor(defaultColor, changedColor, factorProyectos);
+                }
+                else
+                {
+                    clearInterval(IntervalId);
+                }
+            }
+        }, velocidadActualizacion);
+    }
+    else if (elemento == elementoTextoContacto)
+    {   
+        var IntervalId = setInterval(function() {
+            if (defaultColorContacto)
+            { 
+                if (factorContacto>0)
+                {
+                    factorContacto -= cantidadCambioColor;
+                    elemento.style.color = lerpColor(defaultColor, changedColor, factorContacto);
+                }
+                else
+                {
+                    clearInterval(IntervalId);
+                }
+            }
+            else
+            {
+                if (factorContacto<1)
+                {
+                    factorContacto += cantidadCambioColor;
+                    elemento.style.color = lerpColor(defaultColor, changedColor, factorContacto);
                 }
                 else
                 {
