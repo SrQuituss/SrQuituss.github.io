@@ -5,11 +5,6 @@ const elementoTextoContacto = document.getElementById("txt-contacto");
 const barraInicio = document.getElementById("barra-inicio");
 const botonInicio = document.getElementById('btn-inicio');
 
-botonInicio.addEventListener('click', function() {
-    window.location.href = 'index.html';
-});
-
-
 //TEXTO-INICIO
 const textoCompleto = "Bienvenido/a a mi portfolio.";
 const velocidadEscritura = 100;
@@ -18,6 +13,26 @@ const velocidadParpadeoBarra = 500;
 //BOTONES
 const velocidadActualizacion = 20;
 const cantidadAparicion = 0.02;
+const cantidadCambioColor = 0.05;
+var cambiarQuienSoyIntervalId = null;
+var cambiarProyectosIntervalId = null;
+var cambiarContactosIntervalId = null;
+var factorQuienSoy = 0;
+var factorProyectos = 0;
+var factorContacto = 0;
+var defaultColor = black;
+var changedColor = white;
+
+botonInicio.addEventListener('click', function() {
+    window.location.href = 'index.html';
+});
+
+elementoTextoQuienSoy.addEventListener('mouseenter', function(){
+    cambiarColorProgresivamente(elementoTextoQuienSoy, false);
+});
+elementoTextoQuienSoy.addEventListener('mouseexit', function(){
+    cambiarColorProgresivamente(elementoTextoQuienSoy, true);
+});
 
 function repro() {
     
@@ -77,5 +92,52 @@ function repro() {
         },  velocidadActualizacion);
     }
 }
+
+function cambiarColorProgresivamente(elemento, def)
+{
+    if (elemento == elementoTextoQuienSoy)
+    {
+        cambiarQuienSoyIntervalId = setInterval(function() {
+            if (def)
+            { 
+                if (factorQuienSoy>0)
+                {
+                    factorQuienSoy -= cantidadCambioColor;
+                    elemento.lerpColor(white, black, factorQuienSoy);
+                }
+                else
+                {
+                    clearInterval(cambiarQuienSoyIntervalId)
+                }
+            }
+            else
+            {
+                if (factorQuienSoy<1)
+                {
+                    factorQuienSoy += cantidadCambioColor;
+                    elemento.lerpColor(white, black, factorQuienSoy);
+                }
+                else
+                {
+                    clearInterval(cambiarQuienSoyIntervalId)
+                }
+            }
+        }, velocidadActualizacion);
+    }
+}
+
+function lerpColor(color1, color2, factor) {
+    var rgb1 = hexToRgb(color1);
+    var rgb2 = hexToRgb(color2);
+  
+    var r = lerp(rgb1.r, rgb2.r, factor);
+    var g = lerp(rgb1.g, rgb2.g, factor);
+    var b = lerp(rgb1.b, rgb2.b, factor);
+  
+    // Convertir el resultado a formato hexadecimal
+    var interpolatedColor = rgbToHex(r, g, b);
+  
+    return interpolatedColor;
+  }
 
 repro();
