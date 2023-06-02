@@ -58,7 +58,6 @@ elementoTextoContacto.addEventListener('mouseleave', function(){
 function repro() {
     
     let i = 0;
-    añadirBarra();
     escribir();
 
     function escribir() {
