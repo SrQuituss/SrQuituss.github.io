@@ -1,8 +1,5 @@
 body {
     background-image: url("Background.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center top;
 }
 
 #btn-inicio img {
