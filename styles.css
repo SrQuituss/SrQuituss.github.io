@@ -18,6 +18,7 @@ main {
     flex: 1;
     justify-content: center;
     align-content: center;
+    vertical-align: middle;
 }
 
 #inicio {
