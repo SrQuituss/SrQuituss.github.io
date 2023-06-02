@@ -9,12 +9,16 @@ body
     background: linear-gradient(to bottom, orange, yellow);
 }
 
+#inicio {
+    text-align: center;
+}
+
 #copyright {
     color: white;
 }
 
 header {
-    padding: 10;
+    padding: 20px;
 }
 
 footer {
