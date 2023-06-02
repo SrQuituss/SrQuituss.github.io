@@ -11,7 +11,7 @@ function repro() {
 
     function escribir() {
         if (i < textoCompleto.length) {
-            elementoTexto.textContent += texto.charAt(i);
+            elementoTexto.textContent += textoCompleto.charAt(i);
             i++;
             setTimeout(escribir, 100); 
         } 
