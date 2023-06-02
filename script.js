@@ -103,7 +103,7 @@ function cambiarColorProgresivamente(elemento, def)
                 if (factorQuienSoy>0)
                 {
                     factorQuienSoy -= cantidadCambioColor;
-                    elemento.style.color = lerpColor(white, black, factorQuienSoy);
+                    elemento.style.color = lerpColor(defaultColor, changedColor, factorQuienSoy);
                 }
                 else
                 {
@@ -115,7 +115,7 @@ function cambiarColorProgresivamente(elemento, def)
                 if (factorQuienSoy<1)
                 {
                     factorQuienSoy += cantidadCambioColor;
-                    elemento.style.color = lerpColor(white, black, factorQuienSoy);
+                    elemento.style.color = lerpColor(defaultColor, changedColor, factorQuienSoy);
                 }
                 else
                 {
