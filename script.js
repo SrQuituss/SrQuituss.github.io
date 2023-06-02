@@ -23,13 +23,13 @@ function escribirLetraPorLetra(texto, elemento) {
 
     function añadirBarra()
     {
-        barra.style.display = 'inline';
+        barra.style.visibility = 'visible';
         barraVisible = true;
     }
 
     function quitarBarra()
     {
-        barra.style.display = 'none';
+        barra.style.visibility = "hidden";
         barraVisible = false;
     }
 
