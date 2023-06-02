@@ -128,12 +128,12 @@ function cambiarColorProgresivamente(elemento, def)
 
 function lerpColor(color1, color2, factor) {
   
-    var start = colorStart.match(/\d+/g).map(Number);
-    var end = colorEnd.match(/\d+/g).map(Number);
+    var start = color1.match(/\d+/g).map(Number);
+    var end = color2.match(/\d+/g).map(Number);
 
-    var r = Math.round(start[0] * (1 - t) + end[0] * t);
-    var g = Math.round(start[1] * (1 - t) + end[1] * t);
-    var b = Math.round(start[2] * (1 - t) + end[2] * t);
+    var r = Math.round(start[0] * (1 - factor) + end[0] * factor);
+    var g = Math.round(start[1] * (1 - factor) + end[1] * factor);
+    var b = Math.round(start[2] * (1 - factor) + end[2] * factor);
 
     return "rgb(" + r + ", " + g + ", " + b + ")";
 }
