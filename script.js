@@ -74,7 +74,7 @@ function repro() {
             else {
                 clearInterval(mostrarIntervalId);
             }
-        }, velocidadAparicion);
+        },  velocidadActualizacion);
     }
 }
 
