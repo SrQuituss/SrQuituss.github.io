@@ -67,14 +67,15 @@ function repro() {
     function mostrarProgresivamente(elemento) {
         var opacidad = 0;
         var mostrarIntervalId = setInterval(function() {
-          if (opacidad < 1) {
-            opacidad += cantidadAparicion; 
-            elemento.style.opacity = opacidad;
-          } else {
-            clearInterval(mostrarIntervalId);
-          }
+            if (opacidad < 1) {
+                opacidad += cantidadAparicion; 
+                elemento.style.opacity = opacidad;
+            } 
+            else {
+                clearInterval(mostrarIntervalId);
+            }
         }, velocidadAparicion);
-      }
+    }
 }
 
 repro();
