@@ -4,17 +4,20 @@
     cursor: pointer;
 }
 
+body
+{
+    background: linear-gradient(to bottom, orange, yellow);
+}
+
 #copyright {
     color: white;
 }
 
 header {
-    background-color: black;
     padding: 10;
 }
 
 footer {
-    background-color: black;
     padding: 20px;
     text-align: center;
 }
