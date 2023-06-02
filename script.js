@@ -17,6 +17,9 @@ const cantidadCambioColor = 0.05;
 var defaultColorQuienSoy = true;
 var defaultColorProyectos = true;
 var defaultColorContacto = true;
+var quienSoyInterval = null;
+var proyectosInterval = null;
+var contactoInterval = null;
 var factorQuienSoy = 0;
 var factorProyectos = 0;
 var factorContacto = 0;
@@ -117,7 +120,8 @@ function cambiarColorProgresivamente(elemento)
 {
     if (elemento == elementoTextoQuienSoy)
     {   
-        var IntervalId = setInterval(function() {
+        clearInterval(quienSoyInterval);
+        quienSoyInterval = setInterval(function() {
             if (defaultColorQuienSoy)
             { 
                 if (factorQuienSoy>0)
@@ -127,7 +131,7 @@ function cambiarColorProgresivamente(elemento)
                 }
                 else
                 {
-                    clearInterval(IntervalId);
+                    clearInterval(quienSoyInterval);
                 }
             }
             else
@@ -139,14 +143,15 @@ function cambiarColorProgresivamente(elemento)
                 }
                 else
                 {
-                    clearInterval(IntervalId);
+                    clearInterval(quienSoyInterval);
                 }
             }
         }, velocidadActualizacion);
     }
     else if (elemento == elementoTextoProyectos)
     {   
-        var IntervalId = setInterval(function() {
+        clearInterval(proyectosInterval);
+        proyectosInterval = setInterval(function() {
             if (defaultColorProyectos)
             { 
                 if (factorProyectos>0)
@@ -156,7 +161,7 @@ function cambiarColorProgresivamente(elemento)
                 }
                 else
                 {
-                    clearInterval(IntervalId);
+                    clearInterval(proyectosInterval);
                 }
             }
             else
@@ -168,14 +173,15 @@ function cambiarColorProgresivamente(elemento)
                 }
                 else
                 {
-                    clearInterval(IntervalId);
+                    clearInterval(proyectosInterval);
                 }
             }
         }, velocidadActualizacion);
     }
     else if (elemento == elementoTextoContacto)
     {   
-        var IntervalId = setInterval(function() {
+        clearInterval(contactoInterval);
+        contactoInterval = setInterval(function() {
             if (defaultColorContacto)
             { 
                 if (factorContacto>0)
@@ -185,7 +191,7 @@ function cambiarColorProgresivamente(elemento)
                 }
                 else
                 {
-                    clearInterval(IntervalId);
+                    clearInterval(contactoInterval);
                 }
             }
             else
@@ -197,7 +203,7 @@ function cambiarColorProgresivamente(elemento)
                 }
                 else
                 {
-                    clearInterval(IntervalId);
+                    clearInterval(contactoInterval);
                 }
             }
         }, velocidadActualizacion);
