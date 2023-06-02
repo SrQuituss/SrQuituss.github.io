@@ -20,7 +20,7 @@ function escribirLetraPorLetra(texto, elemento) {
         } 
         else {
             setTimeout(reiniciar, 5000); 
-            parpadeoTimeoutId = setTimeout(parpadeoBarra, 1000);
+            parpadeoTimeoutId = setTimeout(parpadeoBarra, 500);
         }
     }
 
@@ -38,8 +38,9 @@ function escribirLetraPorLetra(texto, elemento) {
 
     function parpadeoBarra()
     {
+        elemento.textContent = elemento.textContent.slice(0, -1);
         if (barra) {
-            quitarBarra();
+            elemento.textContent += ' ';
         }
         else {
             añadirBarra();
