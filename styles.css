@@ -4,3 +4,9 @@ body {
     background-repeat: no-repeat;
     background-position: center top;
 }
+
+#btn-inicio img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}

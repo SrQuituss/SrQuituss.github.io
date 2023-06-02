@@ -1,3 +1,3 @@
-document.getElementById('volver-inicio').addEventListener('click', function() {
+document.getElementById('btn-inicio').addEventListener('click', function() {
     window.location.href = 'index.html';
 });
