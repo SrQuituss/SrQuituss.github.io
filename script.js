@@ -2,7 +2,7 @@ const elementoTextoInicio = document.getElementById("txt-inicio");
 const elementoTextoQuienSoy = document.getElementById("txt-quienSoy");
 const elementoTextoProyectos = document.getElementById("txt-proyectos");
 const elementoTextoContacto = document.getElementById("txt-contacto");
-const barraInicio = document.getElementById("barraInicio");
+const barraInicio = document.getElementById("barra-inicio");
 const botonInicio = document.getElementById('btn-inicio');
 
 botonInicio.addEventListener('click', function() {
