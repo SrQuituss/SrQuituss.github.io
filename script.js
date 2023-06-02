@@ -110,7 +110,6 @@ function cambiarColorProgresivamente(elemento)
                 else
                 {
                     clearInterval(IntervalId);
-                    cambiarQuienSoyIntervalId == null;
                 }
             }
             else
@@ -123,7 +122,6 @@ function cambiarColorProgresivamente(elemento)
                 else
                 {
                     clearInterval(IntervalId);
-                    cambiarQuienSoyIntervalId == null;
                 }
             }
         }, velocidadActualizacion);
