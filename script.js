@@ -1,6 +1,22 @@
-document.getElementById('btn-inicio').addEventListener('click', function() {
+const elementoTextoInicio = document.getElementById("txt-inicio");
+const elementoTextoQuienSoy = document.getElementById("txt-quienSoy");
+const elementoTextoProyectos = document.getElementById("txt-proyectos");
+const elementoTextoContacto = document.getElementById("txt-contacto");
+const barraInicio = document.getElementById("barraInicio");
+const botonInicio = document.getElementById('btn-inicio');
+
+botonInicio.addEventListener('click', function() {
     window.location.href = 'index.html';
 });
+
+
+//TEXTO-INICIO
+const textoCompleto = "Bienvenido/a a mi portfolio.";
+const velocidadEscritura = 100;
+const velocidadParpadeoBarra = 500;
+
+//BOTONES
+const velocidadAparicion = 100;
 
 function repro() {
     
@@ -8,15 +24,19 @@ function repro() {
     let barraInicioVisible = true;
     let parpadeoTimeoutId;
     añadirBarra();
+    escribir();
 
     function escribir() {
         if (i < textoCompleto.length) {
             elementoTextoInicio.textContent += textoCompleto.charAt(i);
             i++;
-            setTimeout(escribir, 100); 
+            setTimeout(escribir, velocidadEscritura); 
         } 
         else {
-            parpadeoTimeoutId = setTimeout(parpadeoBarra, 500);
+            parpadeoTimeoutId = setTimeout(parpadeoBarra, velocidadParpadeoBarra);
+            mostrarProgresivamente(elementoTextoQuienSoy);
+            mostrarProgresivamente(elementoTextoProyectos);
+            mostrarProgresivamente(elementoTextoContacto);
         }
     }
 
@@ -40,13 +60,20 @@ function repro() {
         else {
             añadirBarra();
         }
-        parpadeoTimeoutId = setTimeout(parpadeoBarra, 500);
+        parpadeoTimeoutId = setTimeout(parpadeoBarra, velocidadParpadeoBarra);
     }
 
-    escribir();
+    function mostrarProgresivamente(elemento) {
+        var opacidad = 0;
+        var mostrarIntervalId = setInterval(function() {
+          if (opacidad < 1) {
+            opacidad += 0.1; 
+            elemento.style.opacity = opacidad;
+          } else {
+            clearInterval(mostrarIntervalId);
+          }
+        }, velocidadAparicion);
+      }
 }
 
-const textoCompleto = "Bienvenido/a a mi portfolio.";
-const elementoTextoInicio = document.getElementById("txt-inicio");
-const barraInicio = document.getElementById("barraInicio");
 repro();

@@ -37,6 +37,10 @@ main {
     text-align: center;
     font-family: 'Share Tech Mono', monospace;
     font-size: 30px;
+}
+
+#txt-quienSoy, #txt-proyectos, #txt-contacto {
+
     opacity: 0;
 }
 
