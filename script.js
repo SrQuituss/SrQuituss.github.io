@@ -64,12 +64,14 @@ function repro() {
         if (i < textoCompleto.length) {
             elementoTextoInicio.textContent = elementoTextoInicio.textContent.slice(0, -1);
             elementoTextoInicio.textContent += textoCompleto.charAt(i);
-            elementoTextoInicio.textContent += "|";
+            if (i < textoCompleto.length - 1)
+            {
+                elementoTextoInicio.textContent += "|";
+            }
             i++;
             setTimeout(escribir, velocidadEscritura); 
         } 
         else {
-            elementoTextoInicio.textContent = elementoTextoInicio.textContent.slice(0, -1);
             mostrarProgresivamente(elementoTextoQuienSoy);
             mostrarProgresivamente(elementoTextoProyectos);
             mostrarProgresivamente(elementoTextoContacto);
