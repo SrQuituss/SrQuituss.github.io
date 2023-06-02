@@ -5,7 +5,7 @@ document.getElementById('btn-inicio').addEventListener('click', function() {
 function escribirLetraPorLetra(texto, elemento) {
     
     let i = 0;
-    let barraVisible = false;
+    let barraVisible = true;
     let parpadeoTimeoutId;
     añadirBarra();
 
@@ -35,7 +35,7 @@ function escribirLetraPorLetra(texto, elemento) {
 
     function parpadeoBarra()
     {
-        if (barra) {
+        if (barraVisible) {
             quitarBarra();
         }
         else {
