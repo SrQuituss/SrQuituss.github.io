@@ -2,13 +2,11 @@ const elementoTextoInicio = document.getElementById("txt-inicio");
 const elementoTextoQuienSoy = document.getElementById("txt-quienSoy");
 const elementoTextoProyectos = document.getElementById("txt-proyectos");
 const elementoTextoContacto = document.getElementById("txt-contacto");
-const barraInicio = document.getElementById("barra-inicio");
 const botonInicio = document.getElementById('btn-inicio');
 
 //TEXTO-INICIO
 const textoCompleto = "Bienvenido/a a mi portfolio.";
 const velocidadEscritura = 100;
-const velocidadParpadeoBarra = 500;
 
 //BOTONES
 const velocidadActualizacion = 20;
@@ -60,60 +58,37 @@ elementoTextoContacto.addEventListener('mouseleave', function(){
 function repro() {
     
     let i = 0;
-    let barraInicioVisible = true;
-    let parpadeoTimeoutId;
     añadirBarra();
     escribir();
 
     function escribir() {
         if (i < textoCompleto.length) {
+            elementoTextoInicio.textContent = elementoTextoInicio.textContent.slice(0, -1);
             elementoTextoInicio.textContent += textoCompleto.charAt(i);
+            elementoTextoInicio.textContent += "|";
             i++;
             setTimeout(escribir, velocidadEscritura); 
         } 
         else {
-            parpadeoTimeoutId = setTimeout(parpadeoBarra, velocidadParpadeoBarra);
+            elementoTextoInicio.textContent = elementoTextoInicio.textContent.slice(0, -1);
             mostrarProgresivamente(elementoTextoQuienSoy);
             mostrarProgresivamente(elementoTextoProyectos);
             mostrarProgresivamente(elementoTextoContacto);
         }
     }
+}
 
-    function añadirBarra()
-    {
-        barraInicio.style.visibility = 'visible';
-        barraInicioVisible = true;
-    }
-
-    function quitarBarra()
-    {
-        barraInicio.style.visibility = 'hidden';
-        barraInicioVisible = false;
-    }
-
-    function parpadeoBarra()
-    {
-        if (barraInicioVisible) {
-            quitarBarra();
-        }
+function mostrarProgresivamente(elemento) {
+    var opacidad = 0;
+    var mostrarIntervalId = setInterval(function() {
+        if (opacidad < 1) {
+            opacidad += cantidadAparicion; 
+            elemento.style.opacity = opacidad;
+        } 
         else {
-            añadirBarra();
+            clearInterval(mostrarIntervalId);
         }
-        parpadeoTimeoutId = setTimeout(parpadeoBarra, velocidadParpadeoBarra);
-    }
-
-    function mostrarProgresivamente(elemento) {
-        var opacidad = 0;
-        var mostrarIntervalId = setInterval(function() {
-            if (opacidad < 1) {
-                opacidad += cantidadAparicion; 
-                elemento.style.opacity = opacidad;
-            } 
-            else {
-                clearInterval(mostrarIntervalId);
-            }
-        },  velocidadActualizacion);
-    }
+    },  velocidadActualizacion);
 }
 
 function cambiarColorProgresivamente(elemento)
