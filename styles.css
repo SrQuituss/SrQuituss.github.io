@@ -14,12 +14,13 @@ html, body
     flex-direction: column;
 }
 
-mian {
+main {
     flex: 1;
 }
 
 #inicio {
     text-align: center;
+    font
 }
 
 #copyright {
