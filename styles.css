@@ -12,13 +12,12 @@ html, body
     background: linear-gradient(to bottom, orange, yellow);
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 main {
     flex: 1;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     vertical-align: middle;
 }
 
