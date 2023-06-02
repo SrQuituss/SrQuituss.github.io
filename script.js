@@ -96,7 +96,12 @@ function repro() {
 function cambiarColorProgresivamente(elemento, def)
 {
     if (elemento == elementoTextoQuienSoy)
-    {
+    {   
+        if (cambiarQuienSoyIntervalId != null)
+        {
+            clearInterval(cambiarQuienSoyIntervalId)
+            cambiarQuienSoyIntervalId == null;
+        }
         cambiarQuienSoyIntervalId = setInterval(function() {
             if (def)
             { 
@@ -107,7 +112,8 @@ function cambiarColorProgresivamente(elemento, def)
                 }
                 else
                 {
-                    clearInterval(cambiarQuienSoyIntervalId)
+                    clearInterval(cambiarQuienSoyIntervalId);
+                    cambiarQuienSoyIntervalId == null;
                 }
             }
             else
@@ -119,7 +125,8 @@ function cambiarColorProgresivamente(elemento, def)
                 }
                 else
                 {
-                    clearInterval(cambiarQuienSoyIntervalId)
+                    clearInterval(cambiarQuienSoyIntervalId);
+                    cambiarQuienSoyIntervalId == null;
                 }
             }
         }, velocidadActualizacion);
