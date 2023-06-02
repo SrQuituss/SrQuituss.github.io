@@ -31,7 +31,7 @@ elementoTextoQuienSoy.addEventListener('mouseenter', function(){
     defaultColorQuienSoy = false;
     cambiarColorProgresivamente(elementoTextoQuienSoy);
 });
-elementoTextoQuienSoy.addEventListener('mouseexit', function(){
+elementoTextoQuienSoy.addEventListener('mouseleave', function(){
     defaultColorQuienSoy = true;
     cambiarColorProgresivamente(elementoTextoQuienSoy);
 });
