@@ -4,16 +4,26 @@ document.getElementById('btn-inicio').addEventListener('click', function() {
 
 function escribirLetraPorLetra(texto, elemento) {
     let i = 0;
-    const intervalo = setInterval(function() {
+  
+    function escribir() {
         if (i < texto.length) {
             elemento.textContent += texto.charAt(i);
             i++;
-        }
+            setTimeout(escribir, 100); 
+        } 
         else {
-            clearInterval(intervalo);
+            setTimeout(reiniciar, 5000); 
         }
-    }, 100);
-} 
+    }
+  
+    function reiniciar() {
+        elemento.textContent = ""; 
+        i = 0; 
+        escribir(); 
+    }
+  
+    escribir();
+}
 
 const textoCompleto = "Bienvenido/a a mi portfolio";
 const elementoTexto = document.getElementById("txt-inicio");
