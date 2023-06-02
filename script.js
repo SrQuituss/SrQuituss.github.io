@@ -14,9 +14,9 @@ const velocidadParpadeoBarra = 500;
 const velocidadActualizacion = 20;
 const cantidadAparicion = 0.02;
 const cantidadCambioColor = 0.05;
-var cambiarQuienSoyIntervalId = null;
-var cambiarProyectosIntervalId = null;
-var cambiarContactosIntervalId = null;
+var defaultColorQuienSoy = true;
+var defaultColorProyectos = true;
+var defaultColorContacto = true;
 var factorQuienSoy = 0;
 var factorProyectos = 0;
 var factorContacto = 0;
@@ -28,10 +28,12 @@ botonInicio.addEventListener('click', function() {
 });
 
 elementoTextoQuienSoy.addEventListener('mouseenter', function(){
-    cambiarColorProgresivamente(elementoTextoQuienSoy, false);
+    defaultColorQuienSoy = false;
+    cambiarColorProgresivamente(elementoTextoQuienSoy);
 });
 elementoTextoQuienSoy.addEventListener('mouseexit', function(){
-    cambiarColorProgresivamente(elementoTextoQuienSoy, true);
+    defaultColorQuienSoy = true;
+    cambiarColorProgresivamente(elementoTextoQuienSoy);
 });
 
 function repro() {
@@ -93,17 +95,12 @@ function repro() {
     }
 }
 
-function cambiarColorProgresivamente(elemento, def)
+function cambiarColorProgresivamente(elemento)
 {
     if (elemento == elementoTextoQuienSoy)
     {   
-        if (cambiarQuienSoyIntervalId != null)
-        {
-            clearInterval(cambiarQuienSoyIntervalId)
-            cambiarQuienSoyIntervalId == null;
-        }
         cambiarQuienSoyIntervalId = setInterval(function() {
-            if (def)
+            if (defaultColorQuienSoy)
             { 
                 if (factorQuienSoy>0)
                 {
