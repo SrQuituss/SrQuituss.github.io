@@ -29,7 +29,7 @@ function escribirLetraPorLetra(texto, elemento) {
 
     function quitarBarra()
     {
-        barra.style.visibility = "hidden";
+        barra.style.visibility = 'hidden';
         barraVisible = false;
     }
 
