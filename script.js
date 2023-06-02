@@ -19,8 +19,8 @@ function escribirLetraPorLetra(texto, elemento) {
             setTimeout(escribir, 100); 
         } 
         else {
-            setTimeout(reiniciar, 5000); 
             parpadeoTimeoutId = setTimeout(parpadeoBarra, 500);
+            setTimeout(reiniciar, 5000); 
         }
     }
 
@@ -56,6 +56,7 @@ function escribirLetraPorLetra(texto, elemento) {
   
     function reiniciar() {
         elemento.textContent = ""; 
+        barra = false;
         i = 0; 
         clearTimeout(parpadeoTimeoutId);
         setTimeout(escribir, 200); 
