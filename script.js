@@ -46,6 +46,7 @@ function escribirLetraPorLetra(texto, elemento) {
     {
         quitarBarra();
         if (barra) {
+            console.log("hola");
             invisibleBarra();
         }
         else {
@@ -65,6 +66,6 @@ function escribirLetraPorLetra(texto, elemento) {
     escribir();
 }
 
-const textoCompleto = "Bienvenido/a a mi portfolio";
+const textoCompleto = "Bienvenido/a a mi portfolio.";
 const elementoTexto = document.getElementById("txt-inicio");
 escribirLetraPorLetra(textoCompleto, elementoTexto);
