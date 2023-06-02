@@ -44,9 +44,8 @@ function escribirLetraPorLetra(texto, elemento) {
 
     function parpadeoBarra()
     {
-        quitarBarra();
+        elemento.textContent = elemento.textContent.slice(0, -1);
         if (barra) {
-            console.log("hola");
             invisibleBarra();
         }
         else {
