@@ -26,6 +26,12 @@ main {
     font-size: 48px;
 }
 
+#barra {
+    text-align: center;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 48px;
+}
+
 #copyright {
     color: black;
 }

@@ -5,16 +5,13 @@ document.getElementById('btn-inicio').addEventListener('click', function() {
 function escribirLetraPorLetra(texto, elemento) {
     
     let i = 0;
-    let barra = false;
+    let barraVisible = false;
     let parpadeoTimeoutId;
+    añadirBarra();
 
     function escribir() {
         if (i < texto.length) {
-            if (elemento.textContent.length>1){ 
-                quitarBarra();
-            }
             elemento.textContent += texto.charAt(i);
-            añadirBarra();
             i++;
             setTimeout(escribir, 100); 
         } 
@@ -26,27 +23,20 @@ function escribirLetraPorLetra(texto, elemento) {
 
     function añadirBarra()
     {
-        elemento.textContent += '|';
-        barra = true;
+        barra.style.display = 'inline';
+        barraVisible = true;
     }
 
     function quitarBarra()
     {
-        elemento.textContent = elemento.textContent.slice(0, -1);
-        barra = false;
-    }
-
-    function invisibleBarra()
-    {
-        elemento.textContent += + '  ';
-        barra = false;
+        barra.style.display = 'none';
+        barraVisible = false;
     }
 
     function parpadeoBarra()
     {
-        elemento.textContent = elemento.textContent.slice(0, -1);
         if (barra) {
-            invisibleBarra();
+            quitarBarra();
         }
         else {
             añadirBarra();
@@ -56,8 +46,8 @@ function escribirLetraPorLetra(texto, elemento) {
   
     function reiniciar() {
         elemento.textContent = ""; 
-        barra = false;
         i = 0; 
+        añadirBarra();
         clearTimeout(parpadeoTimeoutId);
         setTimeout(escribir, 200); 
     }
@@ -67,4 +57,5 @@ function escribirLetraPorLetra(texto, elemento) {
 
 const textoCompleto = "Bienvenido/a a mi portfolio.";
 const elementoTexto = document.getElementById("txt-inicio");
+const barra = document.getElementById("barra");
 escribirLetraPorLetra(textoCompleto, elementoTexto);
