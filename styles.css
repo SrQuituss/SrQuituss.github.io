@@ -5,15 +5,3 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
 }
-
-@media (max-width: 1200px) {
-    body {
-        background-size: contain;
-    }
-}
-
-@media (min-width: 1600px) {
-    body {
-        background-size: 100% auto;
-    }
-}
