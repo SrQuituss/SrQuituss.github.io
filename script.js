@@ -5,13 +5,13 @@ document.getElementById('btn-inicio').addEventListener('click', function() {
 function repro() {
     
     let i = 0;
-    let barraVisible = true;
+    let barraInicioVisible = true;
     let parpadeoTimeoutId;
     añadirBarra();
 
     function escribir() {
         if (i < textoCompleto.length) {
-            elementoTexto.textContent += textoCompleto.charAt(i);
+            elementoTextoInicio.textContent += textoCompleto.charAt(i);
             i++;
             setTimeout(escribir, 100); 
         } 
@@ -22,19 +22,19 @@ function repro() {
 
     function añadirBarra()
     {
-        barra.style.visibility = 'visible';
-        barraVisible = true;
+        barraInicio.style.visibility = 'visible';
+        barraInicioVisible = true;
     }
 
     function quitarBarra()
     {
-        barra.style.visibility = 'hidden';
-        barraVisible = false;
+        barraInicio.style.visibility = 'hidden';
+        barraInicioVisible = false;
     }
 
     function parpadeoBarra()
     {
-        if (barraVisible) {
+        if (barraInicioVisible) {
             quitarBarra();
         }
         else {
@@ -47,6 +47,6 @@ function repro() {
 }
 
 const textoCompleto = "Bienvenido/a a mi portfolio.";
-const elementoTexto = document.getElementById("txt-inicio");
-const barra = document.getElementById("barra");
+const elementoTextoInicio = document.getElementById("txt-inicio");
+const barraInicio = document.getElementById("barraInicio");
 repro();
