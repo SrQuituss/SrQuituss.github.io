@@ -40,7 +40,7 @@ elementoTextoProyectos.addEventListener('mouseenter', function(){
     defaultColorProyectos = false;
     cambiarColorProgresivamente(elementoTextoProyectos);
 });
-elementoTextoQuienSoy.addEventListener('mouseleave', function(){
+elementoTextoProyectos.addEventListener('mouseleave', function(){
     defaultColorProyectos = true;
     cambiarColorProgresivamente(elementoTextoProyectos);
 });
