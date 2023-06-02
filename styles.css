@@ -16,11 +16,14 @@ html, body
 
 main {
     flex: 1;
+    justify-content: center;
+    align-content: center;
 }
 
 #inicio {
     text-align: center;
     font-family: 'Share Tech Mono', monospace;
+    font-size: 30px;
 }
 
 #copyright {
