@@ -20,8 +20,8 @@ var cambiarContactosIntervalId = null;
 var factorQuienSoy = 0;
 var factorProyectos = 0;
 var factorContacto = 0;
-var defaultColor = rgb(0,0,0);
-var changedColor = rgb(255,255,255);
+var defaultColor = "rgb(0,0,0)";
+var changedColor = "rgb(255,255,255)";
 
 botonInicio.addEventListener('click', function() {
     window.location.href = 'index.html';
@@ -128,11 +128,14 @@ function cambiarColorProgresivamente(elemento, def)
 
 function lerpColor(color1, color2, factor) {
   
-    var r = lerp(color1.r, color2.r, factor);
-    var g = lerp(color1.g, color2.g, factor);
-    var b = lerp(color1.b, color2.b, factor);
-  
-    return rgb(r,g,b);
-  }
+    var start = colorStart.match(/\d+/g).map(Number);
+    var end = colorEnd.match(/\d+/g).map(Number);
+
+    var r = Math.round(start[0] * (1 - t) + end[0] * t);
+    var g = Math.round(start[1] * (1 - t) + end[1] * t);
+    var b = Math.round(start[2] * (1 - t) + end[2] * t);
+
+    return "rgb(" + r + ", " + g + ", " + b + ")";
+}
 
 repro();
