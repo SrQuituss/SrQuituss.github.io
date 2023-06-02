@@ -24,15 +24,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#txt-inicio {
-    text-align: center;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 48px;
-}
-
-#barra {
     text-align: center;
     font-family: 'Share Tech Mono', monospace;
     font-size: 48px;
