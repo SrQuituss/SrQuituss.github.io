@@ -42,6 +42,7 @@ main {
 #txt-quienSoy, #txt-proyectos, #txt-contacto {
 
     opacity: 0;
+    color:rgb(0, 0, 0);
 }
 
 #copyright {

@@ -20,8 +20,8 @@ var cambiarContactosIntervalId = null;
 var factorQuienSoy = 0;
 var factorProyectos = 0;
 var factorContacto = 0;
-var defaultColor = black;
-var changedColor = white;
+var defaultColor = rgb(0,0,0);
+var changedColor = rgb(255,255,255);
 
 botonInicio.addEventListener('click', function() {
     window.location.href = 'index.html';
@@ -103,7 +103,7 @@ function cambiarColorProgresivamente(elemento, def)
                 if (factorQuienSoy>0)
                 {
                     factorQuienSoy -= cantidadCambioColor;
-                    elemento.lerpColor(white, black, factorQuienSoy);
+                    elemento.style.color = lerpColor(white, black, factorQuienSoy);
                 }
                 else
                 {
@@ -115,7 +115,7 @@ function cambiarColorProgresivamente(elemento, def)
                 if (factorQuienSoy<1)
                 {
                     factorQuienSoy += cantidadCambioColor;
-                    elemento.lerpColor(white, black, factorQuienSoy);
+                    elemento.style.color = lerpColor(white, black, factorQuienSoy);
                 }
                 else
                 {
@@ -127,17 +127,12 @@ function cambiarColorProgresivamente(elemento, def)
 }
 
 function lerpColor(color1, color2, factor) {
-    var rgb1 = hexToRgb(color1);
-    var rgb2 = hexToRgb(color2);
   
-    var r = lerp(rgb1.r, rgb2.r, factor);
-    var g = lerp(rgb1.g, rgb2.g, factor);
-    var b = lerp(rgb1.b, rgb2.b, factor);
+    var r = lerp(color1.r, color2.r, factor);
+    var g = lerp(color1.g, color2.g, factor);
+    var b = lerp(color1.b, color2.b, factor);
   
-    // Convertir el resultado a formato hexadecimal
-    var interpolatedColor = rgbToHex(r, g, b);
-  
-    return interpolatedColor;
+    return rgb(r,g,b);
   }
 
 repro();
