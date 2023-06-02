@@ -4,13 +4,17 @@
     cursor: pointer;
 }
 
+#copyright {
+    color: white;
+}
+
 header {
-    background-color: #111;
+    background-color: black;
     padding: 10;
 }
 
 footer {
-    background-color: #111;
+    background-color: black;
     padding: 20px;
     text-align: center;
 }
