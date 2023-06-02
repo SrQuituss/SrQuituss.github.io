@@ -38,7 +38,7 @@ function escribirLetraPorLetra(texto, elemento) {
 
     function invisibleBarra()
     {
-        elemento.textContent = elemento.textContent.slice(0, -1) + ' ';
+        elemento.textContent = elemento.textContent.slice(0, -1) + 'a';
         barra = false;
     }
 
