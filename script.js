@@ -7,7 +7,10 @@ function escribirLetraPorLetra(texto, elemento) {
   
     function escribir() {
         if (i < texto.length) {
-            elemento.textContent += texto.charAt(i);
+            if (texto.length>0){ 
+                texto -= '|'
+            }
+            elemento.textContent += texto.charAt(i) + '|';
             i++;
             setTimeout(escribir, 100); 
         } 
