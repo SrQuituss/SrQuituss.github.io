@@ -36,12 +36,17 @@ function escribirLetraPorLetra(texto, elemento) {
         barra = false;
     }
 
+    function invisibleBarra()
+    {
+        elemento.textContent = elemento.textContent.slice(0, -1)+'';
+        barra = false;
+    }
+
     function parpadeoBarra()
     {
-        elemento.textContent = elemento.textContent.slice(0, -1);
+        quitarBarra();
         if (barra) {
-            elemento.textContent += ' ';
-            barra = false;
+            invisibleBarra();
         }
         else {
             añadirBarra();
