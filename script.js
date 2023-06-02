@@ -99,7 +99,7 @@ function cambiarColorProgresivamente(elemento)
 {
     if (elemento == elementoTextoQuienSoy)
     {   
-        cambiarQuienSoyIntervalId = setInterval(function() {
+        var IntervalId = setInterval(function() {
             if (defaultColorQuienSoy)
             { 
                 if (factorQuienSoy>0)
@@ -109,7 +109,7 @@ function cambiarColorProgresivamente(elemento)
                 }
                 else
                 {
-                    clearInterval(cambiarQuienSoyIntervalId);
+                    clearInterval(IntervalId);
                     cambiarQuienSoyIntervalId == null;
                 }
             }
@@ -122,7 +122,7 @@ function cambiarColorProgresivamente(elemento)
                 }
                 else
                 {
-                    clearInterval(cambiarQuienSoyIntervalId);
+                    clearInterval(IntervalId);
                     cambiarQuienSoyIntervalId == null;
                 }
             }
