@@ -38,7 +38,7 @@ function escribirLetraPorLetra(texto, elemento) {
 
     function invisibleBarra()
     {
-        elemento.textContent += ' ';
+        elemento.textContent += + '\u200B';
         barra = false;
     }
 
