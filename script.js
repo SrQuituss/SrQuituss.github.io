@@ -2,7 +2,7 @@ document.getElementById('btn-inicio').addEventListener('click', function() {
     window.location.href = 'index.html';
 });
 
-function escribirLetraPorLetra(texto, elemento) {
+function repro() {
     
     let i = 0;
     let barraVisible = true;
@@ -10,8 +10,8 @@ function escribirLetraPorLetra(texto, elemento) {
     añadirBarra();
 
     function escribir() {
-        if (i < texto.length) {
-            elemento.textContent += texto.charAt(i);
+        if (i < textoCompleto.length) {
+            elementoTexto.textContent += texto.charAt(i);
             i++;
             setTimeout(escribir, 100); 
         } 
@@ -49,4 +49,4 @@ function escribirLetraPorLetra(texto, elemento) {
 const textoCompleto = "Bienvenido/a a mi portfolio.";
 const elementoTexto = document.getElementById("txt-inicio");
 const barra = document.getElementById("barra");
-escribirLetraPorLetra(textoCompleto, elementoTexto);
+repro();
