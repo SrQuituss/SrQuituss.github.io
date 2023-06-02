@@ -8,7 +8,7 @@ function escribirLetraPorLetra(texto, elemento) {
     function escribir() {
         if (i < texto.length) {
             if (elemento.textContent.length>1){ 
-                elemento.textContent = elemento.textContent.substring(0, elemento.textContent.length() - 1);
+                elemento.textContent = elemento.textContent.slice(0, -1);
             }
             elemento.textContent += texto.charAt(i) + '|';
             i++;
