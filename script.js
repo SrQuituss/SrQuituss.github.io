@@ -41,6 +41,7 @@ function escribirLetraPorLetra(texto, elemento) {
         elemento.textContent = elemento.textContent.slice(0, -1);
         if (barra) {
             elemento.textContent += ' ';
+            barra = false;
         }
         else {
             añadirBarra();
