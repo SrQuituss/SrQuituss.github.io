@@ -78,22 +78,22 @@ footer {
 }
 
 .information {
-    height: 70%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 #photoContainer {
-    clear:both;
+    
 }
 
 #titleContainer {
-    clear:both;
+    
 }
 
 #informationContainer {
-    clear:both;
+    
 }
 
 
