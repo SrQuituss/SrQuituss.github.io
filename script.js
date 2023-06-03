@@ -28,33 +28,6 @@ botonInicio.addEventListener('click', function() {
     window.location.href = 'index.html';
 });
 
-elementoTextoQuienSoy.addEventListener('mouseenter', function(){
-    defaultColorQuienSoy = false;
-    cambiarColorProgresivamente(elementoTextoQuienSoy);
-});
-elementoTextoQuienSoy.addEventListener('mouseleave', function(){
-    defaultColorQuienSoy = true;
-    cambiarColorProgresivamente(elementoTextoQuienSoy);
-});
-
-elementoTextoProyectos.addEventListener('mouseenter', function(){
-    defaultColorProyectos = false;
-    cambiarColorProgresivamente(elementoTextoProyectos);
-});
-elementoTextoProyectos.addEventListener('mouseleave', function(){
-    defaultColorProyectos = true;
-    cambiarColorProgresivamente(elementoTextoProyectos);
-});
-
-elementoTextoContacto.addEventListener('mouseenter', function(){
-    defaultColorContacto = false;
-    cambiarColorProgresivamente(elementoTextoContacto);
-});
-elementoTextoContacto.addEventListener('mouseleave', function(){
-    defaultColorContacto = true;
-    cambiarColorProgresivamente(elementoTextoContacto);
-});
-
 function repro() {
     
     let i = 0;
@@ -75,6 +48,7 @@ function repro() {
             mostrarProgresivamente(elementoTextoQuienSoy);
             mostrarProgresivamente(elementoTextoProyectos);
             mostrarProgresivamente(elementoTextoContacto);
+            habilitarBotones();
         }
     }
 }
@@ -90,6 +64,36 @@ function mostrarProgresivamente(elemento) {
             clearInterval(mostrarIntervalId);
         }
     },  velocidadActualizacion);
+}
+
+function habilitarBotones()
+{
+    elementoTextoQuienSoy.addEventListener('mouseenter', function(){
+        defaultColorQuienSoy = false;
+        cambiarColorProgresivamente(elementoTextoQuienSoy);
+    });
+    elementoTextoQuienSoy.addEventListener('mouseleave', function(){
+        defaultColorQuienSoy = true;
+        cambiarColorProgresivamente(elementoTextoQuienSoy);
+    });
+    
+    elementoTextoProyectos.addEventListener('mouseenter', function(){
+        defaultColorProyectos = false;
+        cambiarColorProgresivamente(elementoTextoProyectos);
+    });
+    elementoTextoProyectos.addEventListener('mouseleave', function(){
+        defaultColorProyectos = true;
+        cambiarColorProgresivamente(elementoTextoProyectos);
+    });
+    
+    elementoTextoContacto.addEventListener('mouseenter', function(){
+        defaultColorContacto = false;
+        cambiarColorProgresivamente(elementoTextoContacto);
+    });
+    elementoTextoContacto.addEventListener('mouseleave', function(){
+        defaultColorContacto = true;
+        cambiarColorProgresivamente(elementoTextoContacto);
+    });
 }
 
 function cambiarColorProgresivamente(elemento)
