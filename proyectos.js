@@ -21,7 +21,7 @@ function scrollOptions(direction) {
       currentIndex--;
     }
   } else {
-    if (currentIndex < options.length - 3) {
+    if (currentIndex < options.length - 1) {
       currentIndex++;
     }
   }
@@ -39,9 +39,9 @@ function updateOptionsVisibility() {
   options.forEach((option, index) => {
     option.classList.remove('selected');
 
-    if (index >= currentIndex && index < currentIndex + 3) {
+    if (index >= currentIndex - 1 && index <= currentIndex + 1) {
       option.style.opacity = '1';
-      if (index === currentIndex + 1) {
+      if (index === currentIndex) {
         option.classList.add('selected');
       }
     } else {
