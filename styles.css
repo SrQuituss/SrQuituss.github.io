@@ -91,12 +91,12 @@ footer {
     
 }
 
-#titleContainer {
+#game-Title {
     font-family: 'Share Tech Mono', monospace;
     font-size: 25px;
 }
 
-#informationContainer {
+#game-Information {
     font-family: 'Share Tech Mono', monospace;
     font-size: 20px;
 }
