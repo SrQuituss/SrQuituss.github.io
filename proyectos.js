@@ -8,8 +8,7 @@ botonInicio.addEventListener('click', function() {
 const optionsContainer = document.querySelector('.options');
 const previousButton = document.querySelector('#previous');
 const nextButton = document.querySelector('#next');
-const options = document.querySelectorAll('.option');
-const optionWidth = optionsContainer.offsetWidth / 3;
+const options = Array.from(document.querySelectorAll('.option'));
 let currentIndex = 1;
 
 previousButton.addEventListener('click', scrollOptions.bind(null, 'previous'));
@@ -25,12 +24,6 @@ function scrollOptions(direction) {
       currentIndex++;
     }
   }
-  
-  const scrollPosition = currentIndex * optionWidth;
-  optionsContainer.scrollTo({
-    left: scrollPosition,
-    behavior: 'smooth'
-  });
 
   updateOptionsVisibility();
 }
