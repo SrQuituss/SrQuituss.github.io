@@ -53,7 +53,7 @@ footer {
 
 #txt-inicio h1 {
     font-family: 'Share Tech Mono', monospace;
-    font-size: 48px;
+    font-size: 60;
 }
 
 #buttons {
@@ -64,7 +64,7 @@ footer {
 }
 
 #buttons h2 {
-    font-size: 30px;
+    font-size: 48px;
 }
 
 #txt-quienSoy, #txt-proyectos, #txt-contacto {
