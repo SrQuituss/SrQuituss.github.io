@@ -84,11 +84,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 7%;
-}
-
-#photoContainer {
-    
+    padding: 10%;
 }
 
 #game-Title {
