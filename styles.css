@@ -62,3 +62,32 @@ footer {
     color:rgb(0, 0, 0);
     user-select: none;
 }
+
+/*PROYECTOS*/
+.selector {
+    display: flex;
+    align-items: center;
+  }
+  
+  .arrow {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .options {
+    display: flex;
+    overflow: hidden;
+    width: 300px;
+  }
+  
+  .option {
+    flex: 0 0 calc(100% / 3);
+    text-align: center;
+    padding: 10px;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+  }
+  
+  .option.selected {
+    opacity: 1;
+  }
