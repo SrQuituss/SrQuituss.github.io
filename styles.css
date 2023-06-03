@@ -88,9 +88,15 @@ footer {
     padding: 10px;
     opacity: 0.5;
     transition: opacity 0.3s;
+    white-space: nowrap; /* Evitar el salto de línea en las opciones */
+    overflow: hidden; /* Ocultar cualquier contenido adicional */
+    text-overflow: ellipsis; /* Mostrar puntos suspensivos si el contenido es demasiado largo */
   }
   
   .option.selected {
     opacity: 1;
-    font-weight: bold; /* Resaltar la opción seleccionada */
+    font-weight: bold;
+    white-space: normal; /* Restaurar el comportamiento normal de salto de línea */
+    overflow: visible; /* Mostrar cualquier contenido adicional */
+    text-overflow: initial; /* Restaurar el comportamiento normal de desbordamiento de texto */
   }
