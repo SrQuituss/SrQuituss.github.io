@@ -74,7 +74,8 @@ footer {
 .option {
     color: black;
     font-family: 'Share Tech Mono', monospace;
-    font-size: 20px;
+    font-size: 30px;
+    font-weight: bold;
     text-align: center;
 }
 
@@ -91,11 +92,13 @@ footer {
 }
 
 #titleContainer {
-    
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 25px;
 }
 
 #informationContainer {
-    
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 20px;
 }
 
 
