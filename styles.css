@@ -83,6 +83,7 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 7%;
+    min-width: 40%;
 }
 
 #photoContainer {
