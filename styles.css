@@ -85,15 +85,15 @@ footer {
 }
 
 #photoContainer {
-    display: block;
+    clear:both;
 }
 
 #titleContainer {
-    display: block;
+    clear:both;
 }
 
 #informationContainer {
-    display: block;
+    clear:both;
 }
 
 
