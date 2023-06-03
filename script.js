@@ -70,33 +70,33 @@ function mostrarProgresivamente(elemento) {
 
 function habilitarBotones()
 {
-    elementoTextoQuienSoy.style.cursor = "pointer";
-    elementoTextoProyectos.style.cursor = "pointer";
-    elementoTextoContacto.style.cursor = "pointer";
+    botonQuienSoy.elementoBoton.style.cursor = "pointer";
+    botonProyectos.elementoBoton.style.cursor = "pointer";
+    botonContacto.elementoBoton.style.cursor = "pointer";
 
-    elementoTextoQuienSoy.addEventListener('mouseenter', function(){
+    botonQuienSoy.elementoBoton.addEventListener('mouseenter', function(){
         botonQuienSoy.buttonTargetColor = false;
         cambiarColorProgresivamente(botonQuienSoy);
     });
-    elementoTextoQuienSoy.addEventListener('mouseleave', function(){
+    botonQuienSoy.elementoBoton.addEventListener('mouseleave', function(){
         botonQuienSoy.buttonTargetColor = true;
         cambiarColorProgresivamente(botonQuienSoy);
     });
     
-    elementoTextoProyectos.addEventListener('mouseenter', function(){
+    botonProyectos.elementoBoton.addEventListener('mouseenter', function(){
         botonProyectos.buttonTargetColor = false;
         cambiarColorProgresivamente(botonProyectos);
     });
-    elementoTextoProyectos.addEventListener('mouseleave', function(){
+    botonProyectos.elementoBoton.addEventListener('mouseleave', function(){
         botonProyectos.buttonTargetColor = true;
         cambiarColorProgresivamente(botonProyectos);
     });
     
-    elementoTextoContacto.addEventListener('mouseenter', function(){
+    botonContacto.elementoBoton.addEventListener('mouseenter', function(){
         botonContacto.buttonTargetColor = false;
         cambiarColorProgresivamente(botonContacto);
     });
-    elementoTextoContacto.addEventListener('mouseleave', function(){
+    botonContacto.elementoBoton.addEventListener('mouseleave', function(){
         botonContacto.buttonTargetColor = true;
         cambiarColorProgresivamente(botonContacto);
     });
