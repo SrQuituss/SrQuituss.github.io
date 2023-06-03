@@ -78,7 +78,7 @@ footer {
     display: flex;
     overflow: hidden;
     width: 300px;
-    justify-content: flex-start;
+    justify-content: center; /* Alinear las opciones al centro */
     scroll-behavior: smooth;
   }
   
