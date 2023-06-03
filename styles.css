@@ -74,7 +74,13 @@ footer {
     cursor: pointer;
 }
 
+.options {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 10px;
+}
+
 .option {
-    clear: both;
+    border: 1px solid black;
 }
   
