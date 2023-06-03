@@ -5,7 +5,7 @@ botonInicio.addEventListener('click', function() {
     window.location.href = 'index.html';
 });
 
-const optionsContainer = document.querySelector('.options');
+/*const optionsContainer = document.querySelector('.options');
 const previousButton = document.querySelector('#previous');
 const nextButton = document.querySelector('#next');
 const options = Array.from(document.querySelectorAll('.option'));
@@ -50,4 +50,4 @@ function updateOptionsVisibility() {
   });
 }
 
-updateOptionsVisibility();
+updateOptionsVisibility();*/
