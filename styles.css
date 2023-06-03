@@ -87,6 +87,8 @@ footer {
     padding: 10px;
     opacity: 0.5;
     transition: opacity 0.3s;
+    color: black;
+    font-family: 'Share Tech Mono', monospace;
   }
   
   .option.selected {
