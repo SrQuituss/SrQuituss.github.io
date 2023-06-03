@@ -80,6 +80,6 @@ footer {
 #information {
 
     height: 70%;
-    align-items: center;
+    justify-content: center;
 }
   
