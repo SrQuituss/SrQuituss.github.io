@@ -10,7 +10,7 @@ const previousButton = document.querySelector('#previous');
 const nextButton = document.querySelector('#next');
 const options = document.querySelectorAll('.option');
 const optionWidth = optionsContainer.offsetWidth / 3;
-let currentIndex = 2;
+let currentIndex = 1;
 
 previousButton.addEventListener('click', scrollOptions.bind(null, 'previous'));
 nextButton.addEventListener('click', scrollOptions.bind(null, 'next'));
@@ -21,12 +21,12 @@ function scrollOptions(direction) {
       currentIndex--;
     }
   } else {
-    if (currentIndex < options.length - 1) {
+    if (currentIndex < options.length - 3) {
       currentIndex++;
     }
   }
   
-  const scrollPosition = currentIndex * optionWidth - optionWidth;
+  const scrollPosition = currentIndex * optionWidth;
   optionsContainer.scrollTo({
     left: scrollPosition,
     behavior: 'smooth'
@@ -39,9 +39,9 @@ function updateOptionsVisibility() {
   options.forEach((option, index) => {
     option.classList.remove('selected');
 
-    if (index >= currentIndex - 1 && index <= currentIndex + 1) {
+    if (index >= currentIndex && index < currentIndex + 3) {
       option.style.opacity = '1';
-      if (index === currentIndex) {
+      if (index === currentIndex + 1) {
         option.classList.add('selected');
       }
     } else {
