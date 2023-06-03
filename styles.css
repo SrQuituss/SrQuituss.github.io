@@ -78,6 +78,7 @@ footer {
     display: flex;
     overflow: hidden;
     width: 300px;
+    justify-content: center;
   }
   
   .option {

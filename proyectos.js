@@ -26,8 +26,9 @@ function scrollOptions(direction) {
     }
   }
   
+  const scrollPosition = currentIndex * optionWidth - (optionsContainer.offsetWidth / 2 - optionWidth / 2);
   optionsContainer.scrollTo({
-    left: currentIndex * optionWidth,
+    left: scrollPosition,
     behavior: 'smooth'
   });
 
