@@ -10,7 +10,7 @@ const previousButton = document.querySelector('#previous');
 const nextButton = document.querySelector('#next');
 const options = document.querySelectorAll('.option');
 const optionWidth = optionsContainer.offsetWidth / 3;
-let currentIndex = 2;
+let currentIndex = 0;
 
 previousButton.addEventListener('click', scrollOptions.bind(null, 'previous'));
 nextButton.addEventListener('click', scrollOptions.bind(null, 'next'));
@@ -21,12 +21,12 @@ function scrollOptions(direction) {
       currentIndex--;
     }
   } else {
-    if (currentIndex < options.length - 1) {
+    if (currentIndex < options.length - 3) {
       currentIndex++;
     }
   }
   
-  const scrollPosition = currentIndex * optionWidth - (optionsContainer.offsetWidth / 2 - optionWidth / 2);
+  const scrollPosition = currentIndex * optionWidth;
   optionsContainer.scrollTo({
     left: scrollPosition,
     behavior: 'smooth'
