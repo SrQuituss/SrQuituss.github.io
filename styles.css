@@ -21,7 +21,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 40%;
 }
 
 #copyright {
@@ -57,7 +56,6 @@ footer {
     align-items: center;
     text-align: center;
     font-family: 'Share Tech Mono', monospace;
-    font-size: 30px;
 }
 
 #txt-quienSoy, #txt-proyectos, #txt-contacto {
@@ -65,6 +63,7 @@ footer {
     opacity: 0;
     color:rgb(0, 0, 0);
     user-select: none;
+    font-size: 30px;
 }
 
 /*PROYECTOS*/
