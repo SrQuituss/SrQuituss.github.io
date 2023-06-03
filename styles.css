@@ -99,4 +99,5 @@ footer {
     white-space: normal; /* Restaurar el comportamiento normal de salto de línea */
     overflow: visible; /* Mostrar cualquier contenido adicional */
     text-overflow: initial; /* Restaurar el comportamiento normal de desbordamiento de texto */
+    transform: scale(1.2); /* Aumentar el tamaño de la opción seleccionada */
   }

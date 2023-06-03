@@ -26,7 +26,7 @@ function scrollOptions(direction) {
     }
   }
 
-  const scrollPosition = currentIndex * optionWidth;
+  const scrollPosition = (currentIndex - 1) * optionWidth;
   optionsContainer.scrollTo({
     left: scrollPosition,
     behavior: 'smooth'
