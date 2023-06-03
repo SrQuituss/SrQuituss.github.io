@@ -78,7 +78,7 @@ footer {
     display: flex;
     overflow: hidden;
     width: 300px;
-    justify-content: center;
+    justify-content: flex-start;
     scroll-behavior: smooth;
   }
   
