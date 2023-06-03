@@ -82,7 +82,18 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    clear: both;
+}
+
+#photoContainer {
+    display: block;
+}
+
+#titleContainer {
+    display: block;
+}
+
+#informationContainer {
+    display: block;
 }
 
 
