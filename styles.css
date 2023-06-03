@@ -92,4 +92,5 @@ footer {
   
   .option.selected {
     opacity: 1;
+    font-weight: bold; /* Resaltar la opción seleccionada */
   }
