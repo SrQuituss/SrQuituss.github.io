@@ -43,6 +43,7 @@ main {
 
     opacity: 0;
     color:rgb(0, 0, 0);
+    touch-action: auto;
 }
 
 #copyright {
