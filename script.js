@@ -68,6 +68,10 @@ function mostrarProgresivamente(elemento) {
 
 function habilitarBotones()
 {
+    elementoTextoQuienSoy.style.cursor = "pointer";
+    elementoTextoProyectos.style.cursor = "pointer";
+    elementoTextoContacto.style.cursor = "pointer";
+
     elementoTextoQuienSoy.addEventListener('mouseenter', function(){
         defaultColorQuienSoy = false;
         cambiarColorProgresivamente(elementoTextoQuienSoy);
