@@ -4,6 +4,14 @@ const elementoTextoProyectos = document.getElementById("txt-proyectos");
 const elementoTextoContacto = document.getElementById("txt-contacto");
 const botonInicio = document.getElementById('btn-inicio');
 
+function claseBoton(elemento,buttonTargetColor, buttonInterval, buttonFactor)
+{
+    this.elementoBoton = elemento;
+    this.buttonTargetColor = buttonTargetColor;
+    this.buttonInterval = buttonInterval;
+    this.buttonFactor = buttonFactor;
+}
+
 //TEXTO-INICIO
 const textoCompleto = "Bienvenido/a a mi portfolio.";
 const velocidadEscritura = 100;
@@ -12,15 +20,9 @@ const velocidadEscritura = 100;
 const velocidadActualizacion = 20;
 const cantidadAparicion = 0.02;
 const cantidadCambioColor = 0.05;
-var defaultColorQuienSoy = true;
-var defaultColorProyectos = true;
-var defaultColorContacto = true;
-var quienSoyInterval = null;
-var proyectosInterval = null;
-var contactoInterval = null;
-var factorQuienSoy = 0;
-var factorProyectos = 0;
-var factorContacto = 0;
+var botonQuienSoy = new claseBoton(elementoTextoQuienSoy, true, null, 0);
+var botonProyectos = new claseBoton(elementoTextoProyectos, true, null, 0);
+var botonContacto = new claseBoton(elementoTextoContacto, true, null, 0);
 var defaultColor = "rgb(0,0,0)";
 var changedColor = "rgb(255,255,255)";
 
@@ -73,125 +75,62 @@ function habilitarBotones()
     elementoTextoContacto.style.cursor = "pointer";
 
     elementoTextoQuienSoy.addEventListener('mouseenter', function(){
-        defaultColorQuienSoy = false;
-        cambiarColorProgresivamente(elementoTextoQuienSoy);
+        botonQuienSoy.buttonTargetColor = false;
+        cambiarColorProgresivamente(botonQuienSoy);
     });
     elementoTextoQuienSoy.addEventListener('mouseleave', function(){
-        defaultColorQuienSoy = true;
-        cambiarColorProgresivamente(elementoTextoQuienSoy);
+        botonQuienSoy.buttonTargetColor = true;
+        cambiarColorProgresivamente(botonQuienSoy);
     });
     
     elementoTextoProyectos.addEventListener('mouseenter', function(){
-        defaultColorProyectos = false;
-        cambiarColorProgresivamente(elementoTextoProyectos);
+        botonProyectos.buttonTargetColor = false;
+        cambiarColorProgresivamente(botonProyectos);
     });
     elementoTextoProyectos.addEventListener('mouseleave', function(){
-        defaultColorProyectos = true;
-        cambiarColorProgresivamente(elementoTextoProyectos);
+        botonProyectos.buttonTargetColor = true;
+        cambiarColorProgresivamente(botonProyectos);
     });
     
     elementoTextoContacto.addEventListener('mouseenter', function(){
-        defaultColorContacto = false;
-        cambiarColorProgresivamente(elementoTextoContacto);
+        botonContacto.buttonTargetColor = false;
+        cambiarColorProgresivamente(botonContacto);
     });
     elementoTextoContacto.addEventListener('mouseleave', function(){
-        defaultColorContacto = true;
-        cambiarColorProgresivamente(elementoTextoContacto);
+        botonContacto.buttonTargetColor = true;
+        cambiarColorProgresivamente(botonContacto);
     });
 }
 
 function cambiarColorProgresivamente(elemento)
 {
-    if (elemento == elementoTextoQuienSoy)
-    {   
-        clearInterval(quienSoyInterval);
-        quienSoyInterval = setInterval(function() {
-            if (defaultColorQuienSoy)
-            { 
-                if (factorQuienSoy>0)
-                {
-                    factorQuienSoy -= cantidadCambioColor;
-                    elemento.style.color = lerpColor(defaultColor, changedColor, factorQuienSoy);
-                }
-                else
-                {
-                    clearInterval(quienSoyInterval);
-                }
+    clearInterval(elemento.buttonInterval);
+    elemento.buttonInterval = setInterval(function() {
+        if (elemento.buttonTargetColor)
+        { 
+            if (elemento.buttonFactor>0)
+            {
+                elemento.buttonFactor -= cantidadCambioColor;
+                elemento.elementoBoton.style.color = lerpColor(defaultColor, changedColor, elemento.buttonFactor);
             }
             else
             {
-                if (factorQuienSoy<1)
-                {
-                    factorQuienSoy += cantidadCambioColor;
-                    elemento.style.color = lerpColor(defaultColor, changedColor, factorQuienSoy);
-                }
-                else
-                {
-                    clearInterval(quienSoyInterval);
-                }
+                clearInterval(elemento.buttonInterval);
             }
-        }, velocidadActualizacion);
-    }
-    else if (elemento == elementoTextoProyectos)
-    {   
-        clearInterval(proyectosInterval);
-        proyectosInterval = setInterval(function() {
-            if (defaultColorProyectos)
-            { 
-                if (factorProyectos>0)
-                {
-                    factorProyectos -= cantidadCambioColor;
-                    elemento.style.color = lerpColor(defaultColor, changedColor, factorProyectos);
-                }
-                else
-                {
-                    clearInterval(proyectosInterval);
-                }
+        }
+        else
+        {
+            if (elemento.buttonFactor<1)
+            {
+                elemento.buttonFactor += cantidadCambioColor;
+                elemento.elementoBoton.style.color = lerpColor(defaultColor, changedColor, elemento.buttonFactor);
             }
             else
             {
-                if (factorProyectos<1)
-                {
-                    factorProyectos += cantidadCambioColor;
-                    elemento.style.color = lerpColor(defaultColor, changedColor, factorProyectos);
-                }
-                else
-                {
-                    clearInterval(proyectosInterval);
-                }
+                clearInterval(elemento.buttonInterval);
             }
-        }, velocidadActualizacion);
-    }
-    else if (elemento == elementoTextoContacto)
-    {   
-        clearInterval(contactoInterval);
-        contactoInterval = setInterval(function() {
-            if (defaultColorContacto)
-            { 
-                if (factorContacto>0)
-                {
-                    factorContacto -= cantidadCambioColor;
-                    elemento.style.color = lerpColor(defaultColor, changedColor, factorContacto);
-                }
-                else
-                {
-                    clearInterval(contactoInterval);
-                }
-            }
-            else
-            {
-                if (factorContacto<1)
-                {
-                    factorContacto += cantidadCambioColor;
-                    elemento.style.color = lerpColor(defaultColor, changedColor, factorContacto);
-                }
-                else
-                {
-                    clearInterval(contactoInterval);
-                }
-            }
-        }, velocidadActualizacion);
-    }
+        }
+    }, velocidadActualizacion);
 }
 
 function lerpColor(color1, color2, factor) {
