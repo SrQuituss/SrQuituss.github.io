@@ -148,4 +148,4 @@ function lerpColor(color1, color2, factor) {
     return "rgb(" + r + ", " + g + ", " + b + ")";
 }
 
-repro();
+setTimeout(repro, 500); 
