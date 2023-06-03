@@ -91,6 +91,9 @@ function habilitarBotones()
         botonProyectos.buttonTargetColor = true;
         cambiarColorProgresivamente(botonProyectos);
     });
+    botonQuienSoy.elementoBoton.addEventListener('click', function(){
+        window.location.href = 'proyectos.html';
+    });
     
     botonContacto.elementoBoton.addEventListener('mouseenter', function(){
         botonContacto.buttonTargetColor = false;
