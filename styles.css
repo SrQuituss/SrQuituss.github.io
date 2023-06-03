@@ -51,6 +51,11 @@ footer {
     font-size: 48px;
 }
 
+#txt-inicio h1 {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 48px;
+}
+
 #buttons {
     justify-content: center;
     align-items: center;
@@ -58,12 +63,14 @@ footer {
     font-family: 'Share Tech Mono', monospace;
 }
 
-#txt-quienSoy, #txt-proyectos, #txt-contacto {
+#buttons h2 {
+    font-size: 30px;
+}
 
+#txt-quienSoy, #txt-proyectos, #txt-contacto {
     opacity: 0;
     color:rgb(0, 0, 0);
     user-select: none;
-    font-size: 30px;
 }
 
 /*PROYECTOS*/
