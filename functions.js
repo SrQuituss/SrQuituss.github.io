@@ -1,4 +1,4 @@
-function escribir(elemento, textoCompleto, i = 0) {
+function escribir(elemento, textoCompleto, velocidadEscritura, i = 0) {
     
     if (i < textoCompleto.length)
     {
