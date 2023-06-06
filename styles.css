@@ -1,6 +1,7 @@
 /*COMUN*/
 #btn-inicio img {
-    height: 90%;
+    height: 40px;
+    widht: 40px;
     cursor: pointer;
 }
 
