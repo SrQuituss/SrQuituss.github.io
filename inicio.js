@@ -32,7 +32,7 @@ botonInicio.addEventListener('click', function() {
 
 function repro() {
     
-    let i = 0;
+    const i = 0;
     if (i < textoCompleto.length) {
         escribir(elementoTextoInicio);
     } 

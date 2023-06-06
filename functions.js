@@ -11,7 +11,7 @@ function escribir(elemento) {
 }
 
 function mostrarProgresivamente(elemento) {
-    
+
     var opacidad = 0;
     var mostrarIntervalId = setInterval(function() {
         if (opacidad < 1) {
