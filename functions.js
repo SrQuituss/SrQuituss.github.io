@@ -1,4 +1,4 @@
-function escribir(elemento) {
+function escribir(elemento, i = 0) {
     
         elemento.textContent = elemento.textContent.slice(0, -1);
         elemento.textContent += textoCompleto.charAt(i);
@@ -7,7 +7,7 @@ function escribir(elemento) {
             elemento.textContent += "|";
         }
         i++;
-        setTimeout(escribir(elemento), velocidadEscritura); 
+        setTimeout(escribir(elemento, i), velocidadEscritura); 
 }
 
 function mostrarProgresivamente(elemento) {

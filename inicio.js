@@ -32,16 +32,11 @@ botonInicio.addEventListener('click', function() {
 
 function repro() {
     
-    const i = 0;
-    if (i < textoCompleto.length) {
-        escribir(elementoTextoInicio);
-    } 
-    else {
-        mostrarProgresivamente(elementoTextoQuienSoy);
-        mostrarProgresivamente(elementoTextoProyectos);
-        mostrarProgresivamente(elementoTextoContacto);
-        habilitarBotones();
-    }
+    escribir(elementoTextoInicio);
+    mostrarProgresivamente(elementoTextoQuienSoy);
+    mostrarProgresivamente(elementoTextoProyectos);
+    mostrarProgresivamente(elementoTextoContacto);
+    habilitarBotones();
 }
 
 function habilitarBotones()
