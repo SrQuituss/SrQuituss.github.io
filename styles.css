@@ -1,6 +1,6 @@
 /*COMUN*/
 #btn-inicio img {
-    height: 100%;
+    width: 5%;
     cursor: pointer;
 }
 
@@ -11,6 +11,7 @@ html, body
     background: linear-gradient(to bottom, rgb(70,70,70), rgb(255,255,255));
     display: flex;
     flex-direction: column;
+    height: 100%
 }
 
 main {
