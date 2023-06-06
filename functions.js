@@ -1,4 +1,17 @@
+function escribir(elemento) {
+    
+        elemento.textContent = elemento.textContent.slice(0, -1);
+        elemento.textContent += textoCompleto.charAt(i);
+        if (i < textoCompleto.length - 1)
+        {
+            elemento.textContent += "|";
+        }
+        i++;
+        setTimeout(escribir(elemento), velocidadEscritura); 
+}
+
 function mostrarProgresivamente(elemento) {
+    
     var opacidad = 0;
     var mostrarIntervalId = setInterval(function() {
         if (opacidad < 1) {

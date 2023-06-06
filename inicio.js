@@ -33,39 +33,15 @@ botonInicio.addEventListener('click', function() {
 function repro() {
     
     let i = 0;
-    escribir();
-
-    function escribir() {
-        if (i < textoCompleto.length) {
-            elementoTextoInicio.textContent = elementoTextoInicio.textContent.slice(0, -1);
-            elementoTextoInicio.textContent += textoCompleto.charAt(i);
-            if (i < textoCompleto.length - 1)
-            {
-                elementoTextoInicio.textContent += "|";
-            }
-            i++;
-            setTimeout(escribir, velocidadEscritura); 
-        } 
-        else {
-            mostrarProgresivamente(elementoTextoQuienSoy);
-            mostrarProgresivamente(elementoTextoProyectos);
-            mostrarProgresivamente(elementoTextoContacto);
-            habilitarBotones();
-        }
+    if (i < textoCompleto.length) {
+        escribir(elementoTextoInicio);
+    } 
+    else {
+        mostrarProgresivamente(elementoTextoQuienSoy);
+        mostrarProgresivamente(elementoTextoProyectos);
+        mostrarProgresivamente(elementoTextoContacto);
+        habilitarBotones();
     }
-}
-
-function mostrarProgresivamente(elemento) {
-    var opacidad = 0;
-    var mostrarIntervalId = setInterval(function() {
-        if (opacidad < 1) {
-            opacidad += cantidadAparicion; 
-            elemento.style.opacity = opacidad;
-        } 
-        else {
-            clearInterval(mostrarIntervalId);
-        }
-    },  velocidadActualizacion);
 }
 
 function habilitarBotones()
@@ -103,49 +79,6 @@ function habilitarBotones()
         botonContacto.buttonTargetColor = true;
         cambiarColorProgresivamente(botonContacto);
     });
-}
-
-function cambiarColorProgresivamente(elemento)
-{
-    clearInterval(elemento.buttonInterval);
-    elemento.buttonInterval = setInterval(function() {
-        if (elemento.buttonTargetColor)
-        { 
-            if (elemento.buttonFactor>0)
-            {
-                elemento.buttonFactor -= cantidadCambioColor;
-                elemento.elementoBoton.style.color = lerpColor(defaultColor, changedColor, elemento.buttonFactor);
-            }
-            else
-            {
-                clearInterval(elemento.buttonInterval);
-            }
-        }
-        else
-        {
-            if (elemento.buttonFactor<1)
-            {
-                elemento.buttonFactor += cantidadCambioColor;
-                elemento.elementoBoton.style.color = lerpColor(defaultColor, changedColor, elemento.buttonFactor);
-            }
-            else
-            {
-                clearInterval(elemento.buttonInterval);
-            }
-        }
-    }, velocidadActualizacion);
-}
-
-function lerpColor(color1, color2, factor) {
-  
-    var start = color1.match(/\d+/g).map(Number);
-    var end = color2.match(/\d+/g).map(Number);
-
-    var r = Math.round(start[0] * (1 - factor) + end[0] * factor);
-    var g = Math.round(start[1] * (1 - factor) + end[1] * factor);
-    var b = Math.round(start[2] * (1 - factor) + end[2] * factor);
-
-    return "rgb(" + r + ", " + g + ", " + b + ")";
 }
 
 setTimeout(repro, 500); 
