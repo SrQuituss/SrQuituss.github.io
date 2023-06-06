@@ -17,7 +17,7 @@ const textoCompleto = "Bienvenido/a a mi portfolio.";
 const velocidadEscritura = 100;
 
 //BOTONES
-const velocidadActualizacion = 20;
+const velocidadActualizacion = 30;
 const cantidadAparicion = 0.02;
 const cantidadCambioColor = 0.05;
 var botonQuienSoy = new claseBoton(elementoTextoQuienSoy, true, null, 0);
@@ -34,7 +34,7 @@ function repro() {
     
     let i = 0;
     escribir();
-    
+
     function escribir() {
         if (i < textoCompleto.length) {
             elementoTextoInicio.textContent = elementoTextoInicio.textContent.slice(0, -1);
