@@ -1,18 +1,3 @@
-function escribir(elemento, textoCompleto, velocidadEscritura, i = 0) {
-    
-    if (i < textoCompleto.length)
-    {
-        elemento.textContent = elemento.textContent.slice(0, -1);
-        elemento.textContent += textoCompleto.charAt(i);
-        if (i < textoCompleto.length - 1)
-        {
-            elemento.textContent += "|";
-        }
-        i++;
-        setTimeout(escribir(elemento, textoCompleto, velocidadEscritura, i), velocidadEscritura); 
-    }
-}
-
 function mostrarProgresivamente(elemento) {
 
     var opacidad = 0;

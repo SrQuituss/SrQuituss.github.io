@@ -32,11 +32,27 @@ botonInicio.addEventListener('click', function() {
 
 function repro() {
     
-    escribir(elementoTextoInicio, textoCompleto, velocidadEscritura);
-    mostrarProgresivamente(elementoTextoQuienSoy);
-    mostrarProgresivamente(elementoTextoProyectos);
-    mostrarProgresivamente(elementoTextoContacto);
-    habilitarBotones();
+    let i = 0;
+    escribir();
+    
+    function escribir() {
+        if (i < textoCompleto.length) {
+            elementoTextoInicio.textContent = elementoTextoInicio.textContent.slice(0, -1);
+            elementoTextoInicio.textContent += textoCompleto.charAt(i);
+            if (i < textoCompleto.length - 1)
+            {
+                elementoTextoInicio.textContent += "|";
+            }
+            i++;
+            setTimeout(escribir, velocidadEscritura); 
+        } 
+        else {
+            mostrarProgresivamente(elementoTextoQuienSoy);
+            mostrarProgresivamente(elementoTextoProyectos);
+            mostrarProgresivamente(elementoTextoContacto);
+            habilitarBotones();
+        }
+    }
 }
 
 function habilitarBotones()
