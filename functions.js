@@ -1,5 +1,7 @@
-function escribir(elemento, textoCompleto,i = 0) {
+function escribir(elemento, textoCompleto, i = 0) {
     
+    if (i < textoCompleto.length)
+    {
         elemento.textContent = elemento.textContent.slice(0, -1);
         elemento.textContent += textoCompleto.charAt(i);
         if (i < textoCompleto.length - 1)
@@ -8,6 +10,7 @@ function escribir(elemento, textoCompleto,i = 0) {
         }
         i++;
         setTimeout(escribir(elemento, textoCompleto, i), velocidadEscritura); 
+    }
 }
 
 function mostrarProgresivamente(elemento) {
