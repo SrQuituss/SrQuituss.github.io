@@ -32,7 +32,7 @@ botonInicio.addEventListener('click', function() {
 
 function repro() {
     
-    escribir(elementoTextoInicio);
+    escribir(elementoTextoInicio, textoCompleto);
     mostrarProgresivamente(elementoTextoQuienSoy);
     mostrarProgresivamente(elementoTextoProyectos);
     mostrarProgresivamente(elementoTextoContacto);
