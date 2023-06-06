@@ -9,7 +9,7 @@ function escribir(elemento, textoCompleto, velocidadEscritura, i = 0) {
             elemento.textContent += "|";
         }
         i++;
-        setTimeout(escribir(elemento, textoCompleto, i), velocidadEscritura); 
+        setTimeout(escribir(elemento, textoCompleto, velocidadEscritura, i), velocidadEscritura); 
     }
 }
 
