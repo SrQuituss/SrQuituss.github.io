@@ -17,7 +17,7 @@ const textoCompleto = "Bienvenido/a a mi portfolio.";
 const velocidadEscritura = 100;
 
 //BOTONES
-const velocidadActualizacion = 30;
+const velocidadActualizacion = 10;
 const cantidadAparicion = 0.02;
 const cantidadCambioColor = 0.05;
 var botonQuienSoy = new claseBoton(elementoTextoQuienSoy, true, null, 0);
