@@ -7,7 +7,6 @@
 
 html, body
 {
-    height: 100%;
     margin: 0;
     padding: 0;
     background: linear-gradient(to bottom, rgb(70,70,70), rgb(255,255,255));
@@ -31,10 +30,12 @@ main {
 
 header {
     padding: 3%;
+    height: 10%;
 }
 
 footer {
     padding: 3%;
+    height: 10%;
     text-align: center;
 }
 
