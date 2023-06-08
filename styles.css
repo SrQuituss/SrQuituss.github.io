@@ -31,12 +31,12 @@ main {
 
 header {
     padding: 3%;
-    height: 10%;
+    height: 100px;
 }
 
 footer {
     padding: 3%;
-    height: 10%;
+    height: 100px;
     text-align: center;
 }
 
