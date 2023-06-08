@@ -50,10 +50,11 @@ footer {
 
 #txt-inicio {
     font-family: 'Share Tech Mono', monospace;
-    @media (max-width): 600px {
+    
+    @media (max-width: 600px) {
         font-size: 40px;
     }
-    @media (min-width): 601px {
+    @media (min-width: 601px) {
         font-size: 70px;
     }
 }
