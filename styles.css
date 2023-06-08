@@ -67,7 +67,13 @@ footer {
 }
 
 #buttons h2 {
-    font-size: 48px;
+    
+    @media (max-width: 1000px) {
+        font-size: 48px;
+    }
+    @media (min-width: 1001px) {
+        font-size: 30px;
+    }
 }
 
 #txt-quienSoy, #txt-proyectos, #txt-contacto {
