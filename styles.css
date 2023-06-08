@@ -16,8 +16,7 @@ html, body
 }
 
 main {
-    flex: 1;
-    display: flex;
+    height: 80%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -31,12 +30,12 @@ main {
 
 header {
     padding: 20px;
-    height: 100px;
+    height: 10%;
 }
 
 footer {
     padding: 20px;
-    height: 100px;
+    height: 10;
     text-align: center;
 }
 
