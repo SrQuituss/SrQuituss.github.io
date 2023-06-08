@@ -69,10 +69,10 @@ footer {
 #buttons h2 {
     
     @media (max-width: 1000px) {
-        font-size: 48px;
+        font-size: 30px;
     }
     @media (min-width: 1001px) {
-        font-size: 30px;
+        font-size: 48px;
     }
 }
 
