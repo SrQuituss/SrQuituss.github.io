@@ -30,12 +30,12 @@ main {
 }
 
 header {
-    padding: 20px;
+    padding: 30px;
     height: 50px;
 }
 
 footer {
-    padding: 20px;
+    padding: 30px;
     height: 50px;
     text-align: center;
 }
