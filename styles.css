@@ -28,7 +28,7 @@ main {
     font-family: 'Share Tech Mono', monospace;
     font-size: 20px;
 
-    @media (max-width: 1280) {
+    @media (max-width: 1280px) {
         font-size: 15px;
     }
     @media (min-width: 1281px) and (max-width: 1920px) {
@@ -64,7 +64,7 @@ footer {
 #txt-inicio {
     font-family: 'Share Tech Mono', monospace;
     
-    @media (max-width: 1280) {
+    @media (max-width: 1280px) {
         font-size: 40px;
     }
     @media (min-width: 1281px) and (max-width: 1920px) {
@@ -87,7 +87,7 @@ footer {
 
 #buttons h2 {
     
-    @media (max-width: 1280) {
+    @media (max-width: 1280px) {
         font-size: 30px;
     }
     @media (min-width: 1281px) and (max-width: 1920px) {
