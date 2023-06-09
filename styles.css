@@ -26,7 +26,7 @@ main {
 #copyright {
     color: black;
     font-family: 'Share Tech Mono', monospace;
-    font-size: 5vw;
+    font-size: 1vw;
 }
 
 header {
@@ -50,7 +50,7 @@ footer {
 
 #txt-inicio {
     font-family: 'Share Tech Mono', monospace;
-    font-size: 15vw;
+    font-size: 3vw;
 }
 
 #buttons {
@@ -62,7 +62,7 @@ footer {
 
 #buttons h2 {
     
-    font-size: 10vw;
+    font-size: 2vw;
 }
 
 #txt-quienSoy, #txt-proyectos, #txt-contacto {
