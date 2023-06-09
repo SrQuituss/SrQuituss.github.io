@@ -26,20 +26,7 @@ main {
 #copyright {
     color: black;
     font-family: 'Share Tech Mono', monospace;
-    font-size: 20px;
-
-    @media (max-width: 1280px) {
-        font-size: 15vw;
-    }
-    @media (min-width: 1281px) and (max-width: 1920px) {
-        font-size: 20vw;
-    }
-    @media (min-width: 1921px) and (max-width: 2560px) {
-        font-size: 30vw;
-    }
-    @media (min-width: 2561px) and (max-width: 3840px) {
-        font-size: 40vw;
-    }
+    font-size: 5vw;
 }
 
 header {
@@ -63,19 +50,7 @@ footer {
 
 #txt-inicio {
     font-family: 'Share Tech Mono', monospace;
-    
-    @media (max-width: 1280px) {
-        font-size: 40vw;
-    }
-    @media (min-width: 1281px) and (max-width: 1920px) {
-        font-size: 70vw;
-    }
-    @media (min-width: 1921px) and (max-width: 2560px) {
-        font-size: 100vw;
-    }
-    @media (min-width: 2561px) and (max-width: 3840px) {
-        font-size: 130vw;
-    }
+    font-size: 15vw;
 }
 
 #buttons {
@@ -87,18 +62,7 @@ footer {
 
 #buttons h2 {
     
-    @media (max-width: 1280px) {
-        font-size: 30vw;
-    }
-    @media (min-width: 1281px) and (max-width: 1920px) {
-        font-size: 48vw;
-    }
-    @media (min-width: 1921px) and (max-width: 2560px) {
-        font-size: 70vw;
-    }
-    @media (min-width: 2561px) and (max-width: 3840px) {
-        font-size: 100vw;
-    }
+    font-size: 10vw;
 }
 
 #txt-quienSoy, #txt-proyectos, #txt-contacto {
