@@ -27,6 +27,19 @@ main {
     color: black;
     font-family: 'Share Tech Mono', monospace;
     font-size: 20px;
+
+    @media (max-width: 1280) {
+        font-size: 15px;
+    }
+    @media (min-width: 1281px) and (max-width: 1920px) {
+        font-size: 20px;
+    }
+    @media (min-width: 1921px) and (max-width: 2560px) {
+        font-size: 30px;
+    }
+    @media (min-width: 2561px) and (max-width: 3840px) {
+        font-size: 40px;
+    }
 }
 
 header {
@@ -51,11 +64,17 @@ footer {
 #txt-inicio {
     font-family: 'Share Tech Mono', monospace;
     
-    @media (max-width: 1000px) {
+    @media (max-width: 1280) {
         font-size: 40px;
     }
-    @media (min-width: 1001px) {
+    @media (min-width: 1281px) and (max-width: 1920px) {
         font-size: 70px;
+    }
+    @media (min-width: 1921px) and (max-width: 2560px) {
+        font-size: 100px;
+    }
+    @media (min-width: 2561px) and (max-width: 3840px) {
+        font-size: 130px;
     }
 }
 
@@ -68,11 +87,17 @@ footer {
 
 #buttons h2 {
     
-    @media (max-width: 1000px) {
+    @media (max-width: 1280) {
         font-size: 30px;
     }
-    @media (min-width: 1001px) {
+    @media (min-width: 1281px) and (max-width: 1920px) {
         font-size: 48px;
+    }
+    @media (min-width: 1921px) and (max-width: 2560px) {
+        font-size: 70px;
+    }
+    @media (min-width: 2561px) and (max-width: 3840px) {
+        font-size: 100px;
     }
 }
 
