@@ -31,6 +31,9 @@ main {
     color: black;
     font-family: 'Share Tech Mono', monospace;
     font-size: 1.2vw;
+    @media (aspect-ratio: 9/16), (aspect-ratio: 9/18), (aspect-ratio: 9/19), (aspect-ratio: 9/20),(aspect-ratio: 9/21){
+        font-size: 2vw;
+    }
 }
 
 header {
