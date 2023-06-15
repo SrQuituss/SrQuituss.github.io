@@ -35,7 +35,6 @@ main {
         font-size: 2vw;
     }
     
-    /* Media query cuando no se cumple la condición */
     @media (min-width: 768px) {
         font-size: 1.2vw;
     }
@@ -63,7 +62,13 @@ footer {
 
 #txt-inicio {
     font-family: 'Share Tech Mono', monospace;
-    font-size: 4.5vw;
+    @media (max-width: 767px) {
+        font-size: 6.5vw;
+    }
+    
+    @media (min-width: 768px) {
+        font-size: 4.5vw;
+    }
 }
 
 #buttons {
@@ -75,7 +80,13 @@ footer {
 
 #buttons h2 {
     
-    font-size: 3vw;
+    @media (max-width: 767px) {
+        font-size: 4.5vw;
+    }
+    
+    @media (min-width: 768px) {
+        font-size: 3vw;
+    }
 }
 
 #txt-quienSoy, #txt-proyectos, #txt-contacto {
