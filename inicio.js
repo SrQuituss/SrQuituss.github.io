@@ -30,7 +30,7 @@ botonInicio.addEventListener('click', function() {
     window.location.href = 'index.html';
 });
 
-window.addEventListener('popstate', function(event) {
+window.addEventListener('popstate', function() {
     ResetPage();
 });
 
