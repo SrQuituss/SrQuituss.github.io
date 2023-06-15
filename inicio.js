@@ -30,10 +30,6 @@ botonInicio.addEventListener('click', function() {
     window.location.href = 'index.html';
 });
 
-window.addEventListener('popstate', function() {
-    ResetPage();
-});
-
 function repro() {
     
     let i = 0;
@@ -73,6 +69,11 @@ function habilitarBotones()
         botonQuienSoy.buttonTargetColor = true;
         cambiarColorProgresivamente(botonQuienSoy);
     });
+    botonQuienSoy.elementoBoton.addEventListener('click', function(){
+        clearInterval(botonQuienSoy.buttonInterval);
+        botonQuienSoy.elementoBoton.style.color = defaultColor;
+        window.location.href = 'quiensoy.html';
+    });
     
     botonProyectos.elementoBoton.addEventListener('mouseenter', function(){
         botonProyectos.buttonTargetColor = false;
@@ -83,6 +84,8 @@ function habilitarBotones()
         cambiarColorProgresivamente(botonProyectos);
     });
     botonProyectos.elementoBoton.addEventListener('click', function(){
+        clearInterval(botonProyectos.buttonInterval);
+        botonProyectos.elementoBoton.style.color = defaultColor;
         window.location.href = 'proyectos.html';
     });
     
@@ -94,16 +97,6 @@ function habilitarBotones()
         botonContacto.buttonTargetColor = true;
         cambiarColorProgresivamente(botonContacto);
     });
-}
-
-function ResetPage()
-{
-    clearInterval(botonProyectos.buttonInterval);
-    botonProyectos.elementoBoton.style.color = defaultColor;
-    clearInterval(botonQuienSoy.buttonInterval);
-    botonQuienSoy.elementoBoton.style.color = defaultColor;
-    clearInterval(botonContacto.buttonInterval);
-    botonContacto.elementoBoton.style.color = defaultColor;
 }
 
 setTimeout(repro, 500); 
