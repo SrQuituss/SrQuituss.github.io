@@ -79,6 +79,8 @@ function habilitarBotones()
         cambiarColorProgresivamente(botonProyectos);
     });
     botonProyectos.elementoBoton.addEventListener('click', function(){
+        clearInterval(botonProyectos.buttonInterval);
+        botonProyectos.elementoBoton.style.color = defaultColor;
         window.location.href = 'proyectos.html';
     });
     
