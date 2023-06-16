@@ -22,11 +22,14 @@
 
     @media (max-width: 767px) {
         font-size: 5vw;
+        padding-bottom: 30px;
     }
     
     @media (min-width: 768px) {
         font-size: 2vw;
+        padding-bottom: 50px;
     }
+
 }
 
 
