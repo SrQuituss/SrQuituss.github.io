@@ -58,13 +58,14 @@
 {
     @media (max-width: 767px) {
         width: 20vw;
+        margin-right: 10vw;
     }
     
     @media (min-width: 768px) {
         width: 7.5vw;
+        margin-right: 10vw;
     }
 
-    margin-right: 2vw;
 }
 
 #my-Learning img:last-child
