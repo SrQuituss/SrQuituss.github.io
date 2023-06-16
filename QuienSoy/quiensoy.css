@@ -1,11 +1,11 @@
 #my-Photo
 {
-    @media (max-width: 768px) {
-        width: 1000vw;
-        height: 1000vw;
+    @media (max-width: 767px) {
+        width: 50vw;
+        height: 50vw;    
     }
     
-    @media (min-width: 769px) {
+    @media (min-width: 768px) {
         width: 10vw;
         height: 10vw;
     }
