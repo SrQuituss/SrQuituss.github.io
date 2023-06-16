@@ -62,12 +62,10 @@ header {
 footer {
     @media (max-width: 767px) {
         padding: 15px;
-        padding-bottom:30px;
     }
     
     @media (min-width: 768px) {
         padding: 30px;
-        padding-bottom: 60px;
     }
     position: sticky;
     bottom: 0;
