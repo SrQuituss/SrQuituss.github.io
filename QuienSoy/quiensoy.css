@@ -1,17 +1,18 @@
 #my-Photo
 {
+    border-width: 1vw;
+    border-style: dashed;
+    border-color: black;
+    
     @media (max-width: 767px) {
         width: 40vw;
-        border: 2vw;
+        border-width: 2vw;
     }
     
     @media (min-width: 768px) {
         width: 15vw;
-        border: 1vw;
+        border-width: 1vw;
     }
-    border: 1vw;
-    border-style: dashed;
-    border-color: black;
 }
 
 #my-Name
