@@ -34,13 +34,14 @@
 {
     color: black;
     font-family: 'Share Tech Mono', monospace;
+    text-align: justify;
 
     @media (max-width: 767px) {
-        font-size: 3vw;
+        font-size: 4vw;
     }
     
     @media (min-width: 768px) {
-        font-size: 2vw;
+        font-size: 3vw;
     }
     padding-right: 30px;
     padding-left: 30px;
