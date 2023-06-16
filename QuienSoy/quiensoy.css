@@ -2,13 +2,13 @@
 {
     @media (max-width: 767px) {
         width: 40vw;
+        border: 2vw;
     }
     
     @media (min-width: 768px) {
         width: 15vw;
+        border: 0.5vw;
     }
-
-    border: 0.5vw;
     border-style: dashed;
     border-color: black;
 }
