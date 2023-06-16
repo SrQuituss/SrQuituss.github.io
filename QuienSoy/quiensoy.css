@@ -1,8 +1,8 @@
 #my-Photo
 {
     @media (max-width: 767px) {
-        width: 50vw;
-        height: 50vw;    
+        width: 40vw;
+        height: 40vw;    
     }
     
     @media (min-width: 768px) {
@@ -21,7 +21,7 @@
     font-family: 'Share Tech Mono', monospace;
 
     @media (max-width: 767px) {
-        font-size: 4.5vw;
+        font-size: 5vw;
     }
     
     @media (min-width: 768px) {
