@@ -38,11 +38,13 @@
 
     @media (max-width: 767px) {
         font-size: 3vw;
+        padding-right: 30px;
+        padding-left: 30px;
     }
     
     @media (min-width: 768px) {
         font-size: 2vw;
+        padding-right: 100px;
+        padding-left: 100px;
     }
-    padding-right: 30px;
-    padding-left: 30px;
 }
