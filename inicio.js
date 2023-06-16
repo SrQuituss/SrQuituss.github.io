@@ -72,7 +72,7 @@ function habilitarBotones()
     botonQuienSoy.elementoBoton.addEventListener('click', function(){
         clearInterval(botonQuienSoy.buttonInterval);
         botonQuienSoy.elementoBoton.style.color = defaultColor;
-        window.location.href = 'Proyectos/quiensoy.html';
+        window.location.href = 'quiensoy.html';
     });
     
     botonProyectos.elementoBoton.addEventListener('mouseenter', function(){
@@ -86,7 +86,7 @@ function habilitarBotones()
     botonProyectos.elementoBoton.addEventListener('click', function(){
         clearInterval(botonProyectos.buttonInterval);
         botonProyectos.elementoBoton.style.color = defaultColor;
-        window.location.href = 'proyectos.html';
+        window.location.href = 'Proyectos/proyectos.html';
     });
     
     botonContacto.elementoBoton.addEventListener('mouseenter', function(){
