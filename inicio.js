@@ -72,7 +72,7 @@ function habilitarBotones()
     botonQuienSoy.elementoBoton.addEventListener('click', function(){
         clearInterval(botonQuienSoy.buttonInterval);
         botonQuienSoy.elementoBoton.style.color = defaultColor;
-        window.location.href = 'quiensoy.html';
+        window.location.href = 'QuienSoy/quiensoy.html';
     });
     
     botonProyectos.elementoBoton.addEventListener('mouseenter', function(){
