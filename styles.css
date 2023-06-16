@@ -53,38 +53,6 @@ footer {
     text-align: center;
 }
 
-/*PROYECTOS*/
-.selector {
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-gap: 10px;
-}
-
-.option {
-    color: black;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.information {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10%;
-}
-
-#game-Title {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 25px;
-}
-
-#game-Information {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 20px;
-}
 
 
   
