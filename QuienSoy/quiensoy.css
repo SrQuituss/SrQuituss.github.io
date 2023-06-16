@@ -57,12 +57,12 @@
 #my-Learning img
 {
     @media (max-width: 767px) {
-        width: 20vw;
+        width: 10vw;
         margin-right: 10vw;
     }
     
     @media (min-width: 768px) {
-        width: 7.5vw;
+        width: 5vw;
         margin-right: 10vw;
     }
 
