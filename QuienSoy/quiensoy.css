@@ -54,6 +54,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    @media (max-width: 767px) {
+
+        padding-top: 20px;
+    }
+    
+    @media (min-width: 768px) {
+
+        padding-top: 50px;
+    }
 }
 
 #my-Learning img
