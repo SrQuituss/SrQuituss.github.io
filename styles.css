@@ -45,7 +45,7 @@ main {
     }
     
     @media (min-width: 768px) {
-        font-size: 1.2vw;
+        font-size: 0.8vw;
     }
 }
 
