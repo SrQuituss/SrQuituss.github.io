@@ -21,10 +21,10 @@
     font-family: 'Share Tech Mono', monospace;
 
     @media (max-width: 767px) {
-        font-size: 6vw;
+        font-size: 4.5vw;
     }
     
     @media (min-width: 768px) {
-        font-size: 4.5vw;
+        font-size: 3vw;
     }
 }
