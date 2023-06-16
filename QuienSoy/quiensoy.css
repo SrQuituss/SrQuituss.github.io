@@ -6,12 +6,12 @@
     
     @media (max-width: 767px) {
         width: 40vw;
-        border-width: 2vw;
+        border-width: 1vw;
     }
     
     @media (min-width: 768px) {
         width: 15vw;
-        border-width: 1vw;
+        border-width: 0.5vw;
     }
 }
 
