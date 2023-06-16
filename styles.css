@@ -53,51 +53,6 @@ footer {
     text-align: center;
 }
 
-/*INICIO*/
-#inicio {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-right: 30px;
-    padding-left: 30px;
-}
-
-#txt-inicio {
-    font-family: 'Share Tech Mono', monospace;
-    @media (max-width: 767px) {
-        font-size: 6.5vw;
-    }
-    
-    @media (min-width: 768px) {
-        font-size: 4.5vw;
-    }
-}
-
-#buttons {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-family: 'Share Tech Mono', monospace;
-}
-
-#buttons h2 {
-    
-    @media (max-width: 767px) {
-        font-size: 4.5vw;
-    }
-    
-    @media (min-width: 768px) {
-        font-size: 3vw;
-    }
-}
-
-#txt-quienSoy, #txt-proyectos, #txt-contacto {
-    opacity: 0;
-    color:rgb(0, 0, 0);
-    user-select: none;
-}
-
 /*PROYECTOS*/
 .selector {
     display: grid;
