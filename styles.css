@@ -67,7 +67,7 @@ footer {
     @media (min-width: 768px) {
         padding: 30px;
     }
-    position: sticky;
+    position: fixed;
     bottom: 0;
     text-align: center;
 }
