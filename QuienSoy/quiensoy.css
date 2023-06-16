@@ -37,11 +37,11 @@
     text-align: justify;
 
     @media (max-width: 767px) {
-        font-size: 4vw;
+        font-size: 3vw;
     }
     
     @media (min-width: 768px) {
-        font-size: 3vw;
+        font-size: 2vw;
     }
     padding-right: 30px;
     padding-left: 30px;
