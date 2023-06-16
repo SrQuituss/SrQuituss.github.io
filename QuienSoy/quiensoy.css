@@ -64,10 +64,10 @@
         width: 7.5vw;
     }
 
-    margin: 10px;
+    margin-left: 2vw;
 }
 
 #my-Learning img:last-child
 {
-    margin: 0;
+    margin-left: 0;
 }
