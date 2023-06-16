@@ -54,7 +54,7 @@
     align-items: center;
 }
 
-.learningImg
+#my-Learning img
 {
     @media (max-width: 767px) {
         width: 20vw;
@@ -64,5 +64,10 @@
         width: 7.5vw;
     }
 
-    margin: 0 10px;
+    margin: 10px;
+}
+
+#my-Learning img:last-child
+{
+    margin: 0;
 }
