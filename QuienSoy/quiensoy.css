@@ -28,3 +28,20 @@
         font-size: 3vw;
     }
 }
+
+
+#my-Information
+{
+    color: black;
+    font-family: 'Share Tech Mono', monospace;
+
+    @media (max-width: 767px) {
+        font-size: 3vw;
+    }
+    
+    @media (min-width: 768px) {
+        font-size: 2vw;
+    }
+    padding-right: 30px;
+    padding-left: 30px;
+}
