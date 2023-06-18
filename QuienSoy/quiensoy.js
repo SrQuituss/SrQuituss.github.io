@@ -1,6 +1,6 @@
 const botonInicio = document.getElementById('btn-inicio');
-const imgLenguajes = document.getElementById('codes');
-const imgApps = document.getElementById('apps');
+var imgLenguajes = document.getElementById('codes');
+var imgApps = document.getElementById('apps');
 
 const imagenesLenguajes = ["C","C++","C#", "HTML", "CSS", "JS0"];
 const imagenesApps = ["C","C++","C#", "HTML", "CSS", "JS0"];
@@ -10,6 +10,9 @@ const cantidadAparicion = 0.02;
 const tiempoDeEspera = 1000;
 var opacidad = 1;
 var animacionAcabada = false;
+
+var indexLenguajes = 0;
+var indexApps = 0;
 
 botonInicio.addEventListener('click', function() {
     window.location.href = '../index.html';
@@ -67,7 +70,21 @@ function mostrarProgresivamente(elemento1, elemento2) {
             } 
             else {
                 animacionAcabada = true;
+                CambiarFoto();
             }
         }
     },  velocidadActualizacion);
+}
+
+function CambiarFoto()
+{
+    indexApps++;
+    indexLenguajes++;
+    if (indexApps==imagenesApps.length)
+        indexApps=0;
+    if (indexLenguajes==imagenesLenguajes.length)
+        indexLenguajes=0;
+
+    imgApps.src = imagenesApps[indexApps];
+    imgLenguajes.src = imagenesLenguajes[indexLenguajes];
 }
