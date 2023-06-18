@@ -8,7 +8,7 @@ const imagenesApps = ["C","C++","C#", "HTML", "CSS", "JS0"];
 const velocidadActualizacion = 20;
 const cantidadAparicion = 0.02;
 const tiempoDeEspera = 1000;
-var opacidad = 0;
+var opacidad = 1;
 var animacionAcabada = false;
 
 botonInicio.addEventListener('click', function() {
@@ -24,7 +24,7 @@ function repro()
 
 function mostrarProgresivamente(elemento1, elemento2) {
 
-    var ocultar = false;
+    var ocultar = true;
     var timer = 0;
 
     var mostrarIntervalId = setInterval(function() {
