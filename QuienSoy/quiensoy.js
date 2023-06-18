@@ -28,11 +28,10 @@ function mostrarProgresivamente(elemento1, elemento2) {
     var timer = 0;
 
     var mostrarIntervalId = setInterval(function() {
-        
-        timer += velocidadActualizacion;
 
         if(animacionAcabada)
         {
+            timer += velocidadActualizacion;
             if (timer>=tiempoDeEspera)
             {
                 if (opacidad>=1)
