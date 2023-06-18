@@ -55,7 +55,7 @@ function mostrarProgresivamente(elemento1, elemento2) {
             } 
             else {
                 animacionAcabada = true;
-                tiempoDeEspera = 0;
+                timer = 0;
             }
         }
         else if (ocultar)
