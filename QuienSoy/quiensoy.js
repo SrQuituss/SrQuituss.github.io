@@ -7,7 +7,7 @@ const imagenesApps = ["Word.png","PowerPoint.png","Excel.png", "Unity.png", "3ds
 
 const velocidadActualizacion = 20;
 const cantidadAparicion = 0.02;
-const tiempoDeEspera = 500;
+var tiempoDeEspera = 500;
 var opacidad = 1;
 var animacionAcabada = false;
 
@@ -40,13 +40,12 @@ function mostrarProgresivamente(elemento1, elemento2) {
                 if (opacidad>=1)
                 {
                     ocultar = true;
-                    animacionAcabada = false;
                 }
                 else if (opacidad <= 0)
                 {
                     ocultar = false;
-                    animacionAcabada = false;
                 }
+                animacionAcabada = false;
             }
         }
         else if (!ocultar)
