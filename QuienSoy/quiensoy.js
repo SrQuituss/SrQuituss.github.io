@@ -2,8 +2,8 @@ const botonInicio = document.getElementById('btn-inicio');
 var imgLenguajes = document.getElementById('codes');
 var imgApps = document.getElementById('apps');
 
-const imagenesLenguajes = ["C","C++","C#", "HTML", "CSS", "JS0"];
-const imagenesApps = ["C","C++","C#", "HTML", "CSS", "JS0"];
+const imagenesLenguajes = ["C.png","C++.png","C#.png", "HTML.png", "CSS.png", "JS.png"];
+const imagenesApps = ["C.png","C++.png","C#.png", "HTML.png", "CSS.png", "JS.png"];
 
 const velocidadActualizacion = 20;
 const cantidadAparicion = 0.02;
