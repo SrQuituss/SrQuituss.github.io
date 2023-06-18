@@ -28,7 +28,7 @@ function repro()
 function mostrarProgresivamente(elemento1, elemento2) {
 
     var ocultar = true;
-    var timer = 0;
+    var timer = 1000;
 
     var mostrarIntervalId = setInterval(function() {
 
