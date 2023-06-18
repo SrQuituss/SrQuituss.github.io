@@ -28,7 +28,7 @@ function repro()
 function mostrarProgresivamente(elemento1, elemento2) {
 
     var ocultar = true;
-    var timer = 1000;
+    var timer = 0;
 
     var mostrarIntervalId = setInterval(function() {
 
@@ -59,6 +59,7 @@ function mostrarProgresivamente(elemento1, elemento2) {
             else {
                 animacionAcabada = true;
                 timer = 0;
+                tiempoDeEspera = 1000;
             }
         }
         else if (ocultar)
@@ -71,6 +72,8 @@ function mostrarProgresivamente(elemento1, elemento2) {
             else {
                 animacionAcabada = true;
                 CambiarFoto();
+                tiempoDeEspera = 500;
+                timer = 0;
             }
         }
     },  velocidadActualizacion);
