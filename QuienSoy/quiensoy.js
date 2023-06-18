@@ -18,7 +18,7 @@ setTimeout(repro, 500);
 
 function repro()
 {
-    mostrarProgresivamente();
+    mostrarProgresivamente(imgLenguajes,imgApps);
 }
 
 function mostrarProgresivamente(elemento1, elemento2) {
