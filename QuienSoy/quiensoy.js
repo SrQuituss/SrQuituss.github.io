@@ -2,12 +2,12 @@ const botonInicio = document.getElementById('btn-inicio');
 var imgLenguajes = document.getElementById('codes');
 var imgApps = document.getElementById('apps');
 
-const imagenesLenguajes = ["C.png","C++.png","C#.png", "HTML.png", "CSS.png", "JS.png"];
-const imagenesApps = ["C.png","C++.png","C#.png", "HTML.png", "CSS.png", "JS.png"];
+const imagenesLenguajes = ["C.png","C++.png","CSharp.png", "HTML.png", "CSS.png", "JS.png"];
+const imagenesApps = ["Word.png","PowerPoint.png","Excel.png", "Unity.png", "3dsMax.png"];
 
 const velocidadActualizacion = 20;
 const cantidadAparicion = 0.02;
-const tiempoDeEspera = 1000;
+const tiempoDeEspera = 500;
 var opacidad = 1;
 var animacionAcabada = false;
 
@@ -59,7 +59,7 @@ function mostrarProgresivamente(elemento1, elemento2) {
             else {
                 animacionAcabada = true;
                 timer = 0;
-                tiempoDeEspera = 1000;
+                tiempoDeEspera = 2000;
             }
         }
         else if (ocultar)
