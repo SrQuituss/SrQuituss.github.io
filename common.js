@@ -5,6 +5,7 @@ const appearingCuantity = 0.02;
 
 function repro()
 {
+    main.style.opacity = 0;
     var opacidad = 0;
     var mostrarIntervalId = setInterval(function() {
         if (opacidad < 1) {
