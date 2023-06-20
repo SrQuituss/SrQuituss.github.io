@@ -18,9 +18,10 @@ function repro()
     },  velocidadUpdate);
 }
 
-function changeWindow(window)
+function changeWindow(windowPath)
 {
-    var opacidad = 0;
+    main.style.opacity = 1;
+    var opacidad = 1;
     var ocultarIntervalId = setInterval(function() {
         if (opacidad > 0) {
             opacidad -= appearingCuantity; 
@@ -28,7 +29,7 @@ function changeWindow(window)
         } 
         else {
             clearInterval(ocultarIntervalId);
-            window.location.href = window;
+            window.location.href = windowPath;
         }
     },  velocidadUpdate);
 }
