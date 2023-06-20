@@ -30,6 +30,7 @@ function changeWindow(windowPath)
         else {
             clearInterval(ocultarIntervalId);
             window.location.href = windowPath;
+            main.style.opacity = 1;
         }
     },  velocidadUpdate);
 }
