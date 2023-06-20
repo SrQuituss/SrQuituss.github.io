@@ -1,20 +1,20 @@
 var main = document.getElementById('main');
 
-const velocidadActualizacion = 10;
-const cantidadAparicion = 0.02;
+const velocidadUpdate = 10;
+const appearingCuantity = 0.02;
 
 function repro()
 {
     var opacidad = 0;
     var mostrarIntervalId = setInterval(function() {
         if (opacidad < 1) {
-            opacidad += cantidadAparicion; 
+            opacidad += appearingCuantity; 
             main.style.opacity = opacidad;
         } 
         else {
             clearInterval(mostrarIntervalId);
         }
-    },  velocidadActualizacion);
+    },  velocidadUpdate);
 }
 
 function changeWindow(window)
@@ -22,14 +22,14 @@ function changeWindow(window)
     var opacidad = 0;
     var ocultarIntervalId = setInterval(function() {
         if (opacidad > 0) {
-            opacidad -= cantidadAparicion; 
+            opacidad -= appearingCuantity; 
             main.style.opacity = opacidad;
         } 
         else {
-            clearInterval(mostrarIntervalId);
+            clearInterval(ocultarIntervalId);
             window.location.href = window;
         }
-    },  velocidadActualizacion);
+    },  velocidadUpdate);
 }
 
 repro();
