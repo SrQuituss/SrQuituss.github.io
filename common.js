@@ -3,6 +3,10 @@ var main = document.getElementById('main');
 const velocidadUpdate = 10;
 const appearingCuantity = 0.02;
 
+window.addEventListener('popstate', function(event) {
+    main.style.opacity = 1;
+});
+
 function repro()
 {
     main.style.opacity = 0;
@@ -30,7 +34,6 @@ function changeWindow(windowPath)
         else {
             clearInterval(ocultarIntervalId);
             window.location.href = windowPath;
-            main.style.opacity = 1;
         }
     },  velocidadUpdate);
 }
