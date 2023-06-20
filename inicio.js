@@ -86,7 +86,7 @@ function habilitarBotones()
     botonProyectos.elementoBoton.addEventListener('click', function(){
         clearInterval(botonProyectos.buttonInterval);
         botonProyectos.elementoBoton.style.color = defaultColor;
-        window.location.href = 'Proyectos/proyectos.html';
+        changeWindow('Proyectos/proyectos.html')
     });
     
     botonContacto.elementoBoton.addEventListener('mouseenter', function(){
