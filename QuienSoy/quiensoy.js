@@ -1,4 +1,3 @@
-const botonInicio = document.getElementById('btn-inicio');
 var imgLenguajes = document.getElementById('codes');
 var imgApps = document.getElementById('apps');
 
@@ -13,10 +12,6 @@ var animacionAcabada = false;
 
 var indexLenguajes = 0;
 var indexApps = 0;
-
-botonInicio.addEventListener('click', function() {
-    window.location.href = '../index.html';
-});
 
 setTimeout(repro, 500); 
 

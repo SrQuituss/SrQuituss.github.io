@@ -2,7 +2,6 @@ const elementoTextoInicio = document.getElementById("txt-inicio");
 const elementoTextoQuienSoy = document.getElementById("txt-quienSoy");
 const elementoTextoProyectos = document.getElementById("txt-proyectos");
 const elementoTextoContacto = document.getElementById("txt-contacto");
-const botonInicio = document.getElementById('btn-inicio');
 
 function claseBoton(elemento,buttonTargetColor, buttonInterval, buttonFactor)
 {
@@ -25,10 +24,6 @@ var botonProyectos = new claseBoton(elementoTextoProyectos, true, null, 0);
 var botonContacto = new claseBoton(elementoTextoContacto, true, null, 0);
 var defaultColor = "rgb(0,0,0)";
 var changedColor = "rgb(255,255,255)";
-
-botonInicio.addEventListener('click', function() {
-    window.location.href = 'index.html';
-});
 
 function repro() {
     
@@ -72,7 +67,7 @@ function habilitarBotones()
     botonQuienSoy.elementoBoton.addEventListener('click', function(){
         clearInterval(botonQuienSoy.buttonInterval);
         botonQuienSoy.elementoBoton.style.color = defaultColor;
-        changeWindow('QuienSoy/quiensoy.html')
+        window.location.href = 'QuienSoy/quiensoy.html';
     });
     
     botonProyectos.elementoBoton.addEventListener('mouseenter', function(){
@@ -86,7 +81,7 @@ function habilitarBotones()
     botonProyectos.elementoBoton.addEventListener('click', function(){
         clearInterval(botonProyectos.buttonInterval);
         botonProyectos.elementoBoton.style.color = defaultColor;
-        changeWindow('Proyectos/proyectos.html')
+        window.location.href = 'Proyectos/proyectos.html';
     });
     
     botonContacto.elementoBoton.addEventListener('mouseenter', function(){
