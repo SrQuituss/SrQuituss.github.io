@@ -3,9 +3,11 @@ var main = document.getElementById('main');
 const velocidadUpdate = 10;
 const appearingCuantity = 0.02;
 
-window.addEventListener('popstate', function(event) {
+window.addEventListener('beforeunload', function(event) {
+    
     main.style.opacity = 1;
 });
+
 
 function repro()
 {
