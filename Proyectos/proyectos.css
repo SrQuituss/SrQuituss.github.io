@@ -38,5 +38,6 @@
 }
 
 .information-Container {
-    vertical-align: center;
+    align-items: center;
+    justify-content: center;
 }
