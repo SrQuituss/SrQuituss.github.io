@@ -27,16 +27,16 @@
 
 #game-Photo {
     width: 20vw;
-    flex:1;
+    display:inline-block;
 }
 
 #game-Information {
     font-family: 'Share Tech Mono', monospace;
     font-size: 20px;
     width: 50vw;
-    flex:1;
+    display:inline-block;
 }
 
 .information-Container {
-    display: flex;
+    white-space: nowrap;
 }
