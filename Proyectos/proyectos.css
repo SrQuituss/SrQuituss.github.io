@@ -32,6 +32,7 @@
 #game-Information {
     font-family: 'Share Tech Mono', monospace;
     font-size: 20px;
+    width: 50vw;
 }
 
 .information-Container {
