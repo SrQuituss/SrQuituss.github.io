@@ -45,6 +45,10 @@
     }
 }
 
+#game-Video {
+    height: 100%;
+}
+
 .information-Container {
     display:  flex;
     align-items: center;
