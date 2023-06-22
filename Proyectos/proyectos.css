@@ -55,3 +55,11 @@
     justify-content: center;
     padding-bottom: 50px;
 }
+
+#information-Container-1:last-child {
+    padding-left: 10vw;
+}
+
+#information-Container-2:first-child {
+    padding-right: 10vw;
+}
