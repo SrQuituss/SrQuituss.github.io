@@ -8,7 +8,7 @@
 .option {
     color: black;
     font-family: 'Share Tech Mono', monospace;
-    font-size: 30px;
+    font-size: 5vw;
     font-weight: bold;
     text-align: center;
 }
@@ -22,7 +22,7 @@
 
 #game-Title {
     font-family: 'Share Tech Mono', monospace;
-    font-size: 25px;
+    font-size: 7vw;
 }
 
 #game-Photo {
