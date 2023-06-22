@@ -35,7 +35,7 @@
 #game-Photo {
     width: 20vw;
     display: inline-block;
-    padding-right: 5vw;
+    padding-right: 3vw;
 }
 
 #game-Information {
@@ -54,7 +54,7 @@
 }
 
 #game-Video {
-    padding-left: 5vw;
+    padding-left: 3vw;
     width: 20vw;
 }
 
