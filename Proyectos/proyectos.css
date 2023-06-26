@@ -79,8 +79,5 @@
     align-items: center;
     justify-content: center;
     padding-bottom: 50px;
-    
-    @media (min-width: 768px) {
-        display:  flex;
-    }
+    display:  flex;
 }
