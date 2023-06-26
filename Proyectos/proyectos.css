@@ -92,7 +92,7 @@
     padding-bottom: 50px;
     display:  flex;
 
-    @media (min-width: 768px) {
+    @media (max-width: 767px) {
         flex-direction: column;
     }
 }
