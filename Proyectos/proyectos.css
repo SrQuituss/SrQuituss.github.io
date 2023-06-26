@@ -90,9 +90,9 @@
     align-items: center;
     justify-content: center;
     padding-bottom: 50px;
-    width: 80vw;
-    
+    display:  flex;
+
     @media (min-width: 768px) {
-        display:  flex;
+        flex-direction: column;
     }
 }
