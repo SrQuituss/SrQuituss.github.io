@@ -8,7 +8,7 @@
     @media (min-width: 768px) {
         grid-template-columns: repeat(6,1fr);
     }
-    grid-gap: 10vw;
+    grid-gap: 2vw;
 }
 
 .option {
