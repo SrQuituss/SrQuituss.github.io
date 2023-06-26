@@ -1,8 +1,14 @@
 /*PROYECTOS*/
 .selector {
     display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-gap: 10px;
+    @media (max-width: 767px) {
+        grid-template-columns: repeat(3,1fr);
+    }
+    
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(6,1fr);
+    }
+    grid-gap: 10vw;
 }
 
 .option {
