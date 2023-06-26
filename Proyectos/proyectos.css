@@ -55,6 +55,11 @@
     }
 }
 
+#game-Videocontainer {
+    align-items: center;
+    justify-content: center;
+}
+
 #game-Video {
     padding-left: 3vw;
     width: 20vw;
