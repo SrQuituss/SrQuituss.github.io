@@ -41,6 +41,7 @@
 #game-Photo {
     display: inline-block;
     padding-right: 3vw;
+    
     @media (max-width: 767px) {
         width: 60vw;
     }
@@ -55,7 +56,6 @@
     text-align: justify;
     width: 50vw;
     display: inline-block;
-
 
     @media (max-width: 767px) {
         font-size: 2vw;
@@ -90,5 +90,12 @@
     align-items: center;
     justify-content: center;
     padding-bottom: 50px;
-    display:  flex;
+
+    @media (max-width: 767px) {
+        display:  inline-block;
+    }
+    
+    @media (min-width: 768px) {
+        display:  flex;
+    }
 }
