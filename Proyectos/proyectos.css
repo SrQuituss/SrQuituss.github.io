@@ -52,11 +52,11 @@
 
 
     @media (max-width: 767px) {
-        font-size: 5vw;
+        font-size: 2vw;
     }
     
     @media (min-width: 768px) {
-        font-size: 2vw;
+        font-size: 1.2vw;
     }
 }
 
