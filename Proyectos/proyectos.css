@@ -63,6 +63,14 @@
 #game-Video {
     padding-left: 3vw;
     width: 20vw;
+    @media (max-width: 767px) {
+        width: 60vw;
+    }
+    
+    @media (min-width: 768px) {
+        width: 20vw;
+    }
+
 }
 
 .information-Container {
